@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>ScrollSpy Bootstrap 5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Icon -->
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      position: relative;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 20px;
+      scroll-margin-top: var(--nav-offset);
+    }
+
+    .btn-emergency {
+      background-color: #ffeef6;
+      border: none;
+      color: #d80073;
+      font-weight: 500;
+    }
+
+    /* 🔥 Highlight menu aktif */
+    .nav-link {
+      color: #555;
+      font-weight: 500;
+      border-radius: 8px;
+      padding: 10px 14px;
+      transition: all .3s ease;
+    }
+
+    .nav-link.active {
+      background-color: #e7f1ff;
+      color: #0d6efd;
+      font-weight: 600;
+    }
+    
+.bg-hotline {
+  background-image: url("https://lh3.googleusercontent.com/d/1gsuMTFxNNC6ckTUFiwNQpSN5x5u2ORgH=w1000?authuser=1");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  /* Optional: Other background properties */
+  background-size: contain; /* Uses the image's natural size */
+  background-color: #0e3f84; /* Fallback color */
+  color:#FFF;
+  /* Ensure the element has a defined size or content for the background to appear */
+  min-height: 200px; 
+  width: 100%;
+}
+
+.spesialisasi{
+    background-image: url("https://i.pinimg.com/736x/2c/6d/15/2c6d15b657a983e7531b9196aa8a11b1.jpg");
+    background-size:cover;
+}
+
+.testimoni{
+    background-color: #344a79;
+}
+      
+/* .testimoni .card {
+    min-height: 320px;
+    background-image: url("https://lh3.googleusercontent.com/d/11IyyCHXGGdhf_rJKbCJTsyzvc-3Jlyhj=w1000?authuser=1");
+    background-size:cover;
+    background-position: top center;
+}
+
+.testimoni .card-body {
+    padding-top: 130px;
+    padding-left: 55px;
+} */
+
+  </style>
+  <style>
+    .info-card{
+      background:#fff;
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 2px 10px rgba(0,0,0,.04);
+      display:flex;
+      gap:20px;
+      align-items:flex-start;
+    }
+    .info-icon{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      background:#e9f0ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#4a76d1;
+      font-size:22px;
+      flex-shrink:0;
+    }
+    .info-icon img{
+       width:30px;
+      height:30px; 
+    }
+    .info-title{
+      font-size:14px;
+      color:#8a8a8a;
+      margin-bottom:6px;
+    }
+    .info-text{
+      font-size:20px;
+      font-weight:700;
+      line-height:1.4;
+      color:#000;
+    }
+
+    @media (max-width:576px){
+      .info-text{
+        font-size:12px;
+      }
+    }
+  </style>
+  <style>
+      #testimoniCarousel{
+            background-image: url("https://lh3.googleusercontent.com/d/11IyyCHXGGdhf_rJKbCJTsyzvc-3Jlyhj=w1000?authuser=1");
+    background-size:cover;
+    background-position: top center;
+    min-height:320px;
+      }
+/* ===== CARD ===== */
+.testimoni-card .card {
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+}
+
+.carousel-item .card{
+padding-top: 130px;
+    padding-left: 50px;
+  background: transparent !important;
+  border: none;
+}
+
+
+/* ===== INDIKATOR ===== */
+.carousel-indicators {
+  position: relative;
+  margin-top: 2rem;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #ccc;
+  transition: all .3s ease;
+}
+.carousel-indicators .active {
+  width: 22px; /* 🔥 aktif 2x lebar */
+  background-color: #0d6efd;
+}
+
+.carousel-item .card {
+  opacity: 0;
+  transform: scale(.9);
+  transition: all .5s ease;
+}
+
+.carousel-item.active .card {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-item.active .col:nth-child(1) .card { transition-delay: .1s; }
+.carousel-item.active .col:nth-child(2) .card { transition-delay: .25s; }
+.carousel-item.active .col:nth-child(3) .card { transition-delay: .4s; }
+
+</style>
+<style>
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #0d6efd;
+  border-radius: 4px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.timeline-dot {
+  position: absolute;
+  left: -1px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+.timeline-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.timeline-year {
+  font-weight: 600;
+  color: #0d6efd;
+}
+</style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar-expand-sm fixed-top shadow-sm bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#beranda">
+      <img src="https://i0.wp.com/sinarmu.co/wp-content/uploads/2022/08/muhammadiyah.png?zoom=3&resize=220%2C218&ssl=1"
+           style="width:40px;" class="rounded-pill">
+      <img src="https://lh3.googleusercontent.com/d/1n6_fl_H0pkBgQuBsI_jaxMv4nA08t4Om=w1000?authuser=1"
+           style="height:50px;">
+    </a>
+
+    <button class="btn btn-sm btn-emergency">
+      <img src="https://cdn-icons-png.flaticon.com/128/10805/10805759.png" style="height: 20px;"> Gawat Darurat
+    </button>
+
+    <button class="btn btn-sm btn-light"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight">
+      <i class="fi fi-sc-bars-staggered"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div class="offcanvas-header">
+    <img src="https://lh3.googleusercontent.com/d/1Qj9YQ8tAAWoUeUC1soIM3FNFZqrO7pPQ=w1000?authuser=1"
+         style="height:40px;">
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul id="mainNav" class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#beranda" data-bs-dismiss="offcanvas">Beranda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#tentang" data-bs-dismiss="offcanvas">Tentang</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#poli" data-bs-dismiss="offcanvas">Spesialisasi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#jadwal" data-bs-dismiss="offcanvas">Jadwal Dokter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#fasilitas" data-bs-dismiss="offcanvas">Fasilitas Layanan</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#helpdesk" class="btn btn-info" data-bs-dismiss="offcanvas">Customer Care</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#testimoni" class="btn btn-info" data-bs-dismiss="offcanvas">Kata Mereka</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#kontak" data-bs-dismiss="offcanvas">Hubungi Kami</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECTION -->
+<section id="beranda" class="bg-light">
+  <div class="container">
+    <h1>Beranda</h1>
+    <p>Konten beranda.</p>
+  </div>
+</section>
+
+<section id="helpdesk" class="bg-hotline">
+  <div class="container">
+    <h1><em>Customer Care</em></h1>
+    <p>Kini Whatsapp <em>Customer Care</em> untuk menjawab kebutuhan layanan kesehatan jiwa</p>
+    <div class="info-card mb-4">
+    <ol class="list-group list-group-numbered list-group-flush">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Hotline telemedecine</div>
+      <a href="#" class="btn btn-primary"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" style="height:20px;"> 0813-9835-8322</a>
+    </div>
+    
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Reservasi kontrol ulang pasien JKN/BPJS</div>
+      <p>dapat dilakukan H-1 sesuai jadwal kontrol, yang harus disiapkan untuk reservasi salinan :
+      <ol>
+          <li>Surat Rujukan</li>
+          <li>Surat Kontrol</li>
+          <li>Kartu BPJS</li>
+      </ol>
+      </p>
+      <a href="#" class="btn btn-primary"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" style="height:20px;"> 0811-1588-112</a>
+    </div>
+  </li>
+</ol>
+</div>
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="container">
+    <h1>Tentang</h1>
+    <p>Informasi rumah sakit.</p>
+    <div class="info-card mb-4">
+        
+    </div>
+    
+  </div>
+</section>
+
+<section id="poli" class="bg-light spesialisasi">
+  <div class="container">
+    <h1>Spesialisasi</h1>
+    <p>Layanan kesehatan mental berbasis empati, keahlian, dan standar medis.</p>
+    <div class="info-card mb-4">
+       <div class="accordion accordion-flush" id="accordionFlushExample" style="width:100%">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Klinik Psikiatri
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Klinik Psikologi</button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Klinik Spiritual
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        Rehabilitasi Psikososil
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+        Klinik Tumbuh Kembang Anak
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+    </div>
+  </div>
+  
+</div> 
+    </div>
+    
+  <div class="info-card mb-4">
+      
+  </div> 
+  
+  </div>
+</section>
+
+<section id="jadwal" class="bg-light">
+  <div class="container">
+    <h1>Jadwal Dokter</h1>
+    <p>Jadwal praktek dokter mendampingi pasien untuk kesehatan mental yang aman, profesional, dan berkelanjutan.</p>
+    
+    <div class="info-card mb-4">
+    <div class="info-icon">
+      <img src="https://cdn-icons-png.flaticon.com/128/4030/4030492.png" alt="info dokter">
+    </div>
+    <div>
+      <div class="info-title">Informasi dokter</div>
+      <div class="info-text">
+        [belum ada informasi]
+      </div>
+    </div>
+  </div>
+   
+  </div>
+</section>
+
+<section id="fasilitas">
+  <div class="container">
+    <h1>Fasilitas</h1>
+    <p>Layanan kesehatan mental berbasis empati, keahlian, dan standar medis. Menjadi ruang aman untuk pemulihan dan keseimbangan jiwa untuk kesehatan mental yang berkelanjutan.</p>
+    <div class="info-card mb-4">
+        
+    </div>
+  </div>
+</section>
+<section id="testimoni" class="testimoni">
+  <div class="container">
+    <h1 style="color:#FFF;">Kata Mereka</h1>
+    <p style="color:#FFF;">Kata mereka yang telah mendapatkan layanan kesehatan mental yang berkelanjutan di Rumah Sakit Islam Jiwa Klender</p>
+    <!-- carousel -->
+    
+    
+<div id="testimoniCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+  <!-- CAROUSEL -->
+  <div class="carousel-inner" style="background-color: transparent;border: none;">
+
+    <!-- SLIDE 1 -->
+    <div class="carousel-item active">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Pelayanan sangat ramah dan cepat.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Ahmad <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Dokter profesional dan komunikatif.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Siti <cite>Keluarga Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Fasilitas lengkap dan nyaman.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Budi <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="carousel-item">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Lingkungan rumah sakit bersih.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Rina <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Perawat sangat membantu.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Andi <cite>Keluarga Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Pelayanan cepat dan terorganisir.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Dewi <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  
+  <!-- INDICATOR -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+</div>
+    <!-- carousel -->
+    
+  </div>
+</section>
+<section id="kontak" class="bg-light">
+  
+  <div class="container">
+    <h1>Kontak</h1>
+    <p>Alamat dan kontak.</p>
+    <div class="row">
+        <div class="col-md-6">
+           <!-- Alamat -->
+  <div class="info-card mb-4">
+    <div class="info-icon">
+      <img src="https://cdn-icons-png.flaticon.com/128/13804/13804210.png" alt="location">
+    </div>
+    <div>
+      <div class="info-title">Alamat</div>
+      <div class="info-text">
+        Jl. Bunga Rampai X, Perumnas Klender
+Malaka Jaya - Duren Sawit - Jakarta Timur
+      </div>
+    </div>
+  </div>
+
+  <!-- Telepon -->
+  <div class="info-card mb-4">
+    <div class="info-icon">
+      <img src="https://cdn-icons-png.flaticon.com/128/1538/1538493.png">
+    </div>
+    <div>
+      <div class="info-title">Telepon</div>
+      <div class="info-text">
+        (021) 8622491 / 86602402
+      </div>
+    </div>
+  </div>
+
+        </div>
+        <div class="col-md-6">
+           <div class="info-card mb-4">
+  <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+    <iframe
+      src="https://www.google.com/maps?q=-6.2221307,106.9331145&hl=id&z=17&output=embed"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div> 
+        </div>
+    </div>
+    <div class="row">
+      <p>Ikuti media sosial kami</p>  
+      <div class="d-flex justify-content-center justify-content-md-end gap-3 align-items-center">
+          <!-- Placeholder sosmed -->
+          <div class="border rounded p-2 d-flex align-items-center justify-content-center"
+               style="height:50px;">
+            <img src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="Yt" style="height:30px;">
+            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="IG" style="margin-left: 10px; margin-right:10px; height:20px;">
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="fb" style="margin-right:10px; height:20px;">
+            <span>rsijk_klender</span>
+          </div>
+          <!-- Placeholder sosmed -->
+          <div class="border rounded p-2 d-flex align-items-center justify-content-center"
+               style="height:50px;">
+            
+            <img src="https://cdn-icons-png.flaticon.com/128/3046/3046121.png" alt="tiktok" style="margin-right:10px; height:20px;">
+            <span>rsji.islam.klender</span>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+</section>
+<footer class="footer mt-auto py-4 border-top bg-white">
+  <div class="container">
+    <div class="row align-items-center gy-3">
+
+      <!-- KIRI -->
+      <div class="col-md-6 text-center text-md-start">
+        <small class="text-muted">
+          Copyright © 2026
+          <strong>Rumah Sakit Islam Jiwa Klender</strong>
+        </small>
+      </div>
+
+      <!-- KANAN -->
+      <div class="col-md-6">
+        <div class="d-flex justify-content-center justify-content-md-end gap-3 align-items-center">
+
+          <!-- Placeholder Akreditasi -->
+          <div class="border rounded p-2 d-flex align-items-center justify-content-center"
+               style="width:80px; height:50px;">
+            <img src="https://rsikendal.com/profile/web/images/SNARS-putih.png" alt="Akreditasi RS" style="width:60px;">
+          </div>
+
+          <!-- Placeholder BPJS -->
+          <div class="border rounded p-2 d-flex align-items-center justify-content-center"
+               style="width:80px; height:50px;">
+            <img src="https://www.bpjs-kesehatan.go.id/assets/img/logo/logo-color.svg" alt="BPJS Kesehatan" style="object-fit: contain;">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- 🔥 OFFSET DINAMIS -->
+<script>
+  function setNavOffset() {
+    const navbar = document.getElementById('navbar');
+    document.documentElement.style.setProperty(
+      '--nav-offset',
+      navbar.offsetHeight + 'px'
+    );
+  }
+
+  window.addEventListener('load', setNavOffset);
+  window.addEventListener('resize', setNavOffset);
+</script>
+<script>
+document.querySelectorAll('#mainNav .nav-link').forEach(link => {
+  link.addEventListener('click', function () {
+    const offcanvasEl = document.getElementById('offcanvasRight');
+    const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+
+    // Delay kecil → biar scroll mulai dulu
+    setTimeout(() => {
+      offcanvas.hide();
+    }, 250);
+  });
+});
+</script>
+</body>
+  </html>
