@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <title>ScrollSpy Bootstrap 5</title>
+  <title>RSIJ Klender</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <!-- Favicons -->
+  <link href="https://www.rsjiwaislam.com/assets/img/LOGO_RS_JIWA_KLENDER_BARUwebb.jpg" rel="icon">
+  <link href="https://www.rsjiwaislam.com/assets/img/LOGO_RS_JIWA_KLENDER_BARUwebb.jpg" rel="apple-touch-icon">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -73,10 +75,6 @@
   line-height: 1.3;
 }
 
-.testimoni{
-    background-color: #344a79;
-}
-
   </style>
   <style>
     .info-card{
@@ -123,33 +121,48 @@
     }
   </style>
   <style>
-  /* Mengatur durasi fade agar lebih halus (defaultnya 0.6s) */
-#testimoniCarousel.carousel-fade .carousel-item {
-    transition: opacity 0.8s ease-in-out;
-}
+    .testimoni{
+        background-color: #d0c6b2;
+    }
 
-/* Mengatur posisi indikator agar berada di bawah card, bukan menimpanya */
-.carousel-indicators {
-    position: relative; /* Menaruhnya di luar container slide */
-    margin-top: 30px;
-}
+    .testimoni .card{
+      background-image: url(https://i.pinimg.com/736x/c6/32/e1/c632e17b04ace45051c480ae0bb61157.jpg);
+      background-size: cover;
+      min-height: 424px;
+      background-position: center center;
+    }
 
-.carousel-indicators [data-bs-target] {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; /* Membuat indikator bulat */
-}
+    .testimoni .card .card-body{
+      padding: 113px 60px 60px;
+    } 
 
-/* Menghilangkan border default card agar terlihat lebih modern dengan shadow */
-.card {
-    border: none;
-    transition: transform 0.3s ease;
-}
+      /* Mengatur durasi fade agar lebih halus (defaultnya 0.6s) */
+    #testimoniCarousel.carousel-fade .carousel-item {
+        transition: opacity 0.8s ease-in-out;
+    }
 
-/* Efek hover opsional */
-.card:hover {
-    transform: translateY(-5px);
-}
+    /* Mengatur posisi indikator agar berada di bawah card, bukan menimpanya */
+    .carousel-indicators {
+        position: relative; /* Menaruhnya di luar container slide */
+        margin-top: 30px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; /* Membuat indikator bulat */
+    }
+
+    /* Menghilangkan border default card agar terlihat lebih modern dengan shadow */
+    .card {
+        border: none;
+        transition: transform 0.3s ease;
+    }
+
+    /* Efek hover opsional */
+    .card:hover {
+        transform: translateY(-5px);
+    }
   </style>
 
 </head>
@@ -195,7 +208,7 @@
         <a class="nav-link" href="#tentang" data-bs-dismiss="offcanvas">Tentang</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#poli" data-bs-dismiss="offcanvas">Spesialisasi</a>
+        <a class="nav-link" href="#poli" data-bs-dismiss="offcanvas">Layanan Rumah Sakit</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#jadwal" data-bs-dismiss="offcanvas">Jadwal Dokter</a>
@@ -280,17 +293,152 @@
 
 <section id="poli" class="bg-light spesialisasi">
   <div class="container">
-    <h1>Spesialisasi</h1>
-    <p>Layanan kesehatan mental berbasis empati, keahlian, dan standar medis.</p>
+    <h1>Layanan Rumah Sakit</h1>
+    <p>Layanan kesehatan mental berbasis empati, keahlian, dan standar medis menjadi ruang aman untuk pemulihan dan keseimbangan jiwa untuk kesehatan mental yang berkelanjutan.</p>
     <div class="info-card mb-4">
        <div class="accordion accordion-flush" id="accordionFlushExample" style="width:100%"></div> 
     </div>
-    
-  <div class="info-card mb-4">
-      
-  </div> 
-  
+    <h3>Rawat Inap</h3>
+    <div class="row">
+
+      <div class="col-6">
+        <div class="card">
+          <img src="https://www.rsjiwaislam.com/source/kelas%20utama.jpg" class="card-img-top" alt="KELAS UTAMA">
+          <div class="card-body">
+            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inaputama" aria-expanded="false" aria-controls="inaputama">Kelas Utama<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
+            </button>
+            <div class="collapse" id="inaputama">
+              <div class="card card-body">
+                <ul class="list-group list-group-flush" style="font-size: 11px;">
+                  <li class="list-group-item">Kamar dengan 1 tempat tidur</li>
+                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
+                  <li class="list-group-item">Televisi LED</li>
+                  <li class="list-group-item">Lemari Es</li>
+                  <li class="list-group-item">Sofa Tunggu</li>
+                  <li class="list-group-item">Teras dan Kursi Taman</li>
+                  <li class="list-group-item">Kamar mandi di dalam</li>
+                  <li class="list-group-item">Ruang tunggu pasien khusus</li>
+                  <li class="list-group-item">Pintu besuk pengunjung tersendiri</li>
+                  <li class="list-group-item">Lemari kecil</li>
+                  <li class="list-group-item">Pengharum ruangan</li>
+                  <li class="list-group-item">Kamera CCTV</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <img src="https://www.rsjiwaislam.com/source/Kelas%201%20pria.jpg" class="card-img-top" alt="KELAS I (SATU)">
+          <div class="card-body">
+            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapsatu" aria-expanded="false" aria-controls="inapsatu">Kelas I (satu)<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
+            </button>
+            <div class="collapse" id="inapsatu">
+              <div class="card card-body">
+                <ul class="list-group list-group-flush" style="font-size: 11px;">
+                  <li class="list-group-item">Kamar dengan 3 tempat tidur</li>
+                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
+                  <li class="list-group-item">Televisi</li>
+                  <li class="list-group-item">Lemari Es</li>
+                  <li class="list-group-item">Teras dan Kursi Taman</li>
+                  <li class="list-group-item">Kamar mandi di dalam</li>
+                  <li class="list-group-item">Lemari/Nakas</li>
+                  <li class="list-group-item">Kamera CCTV</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <img src="https://www.rsjiwaislam.com/source/Klas%202%20Pria.jpg" class="card-img-top" alt="KELAS II (DUA)">
+          <div class="card-body">
+            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapdua" aria-expanded="false" aria-controls="inapdua">Kelas II (dua)<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
+            </button>
+            <div class="collapse" id="inapdua">
+              <div class="card card-body">
+                <ul class="list-group list-group-flush" style="font-size: 11px;">
+                  <li class="list-group-item">Kamar dengan 4 tempat tidur</li>
+                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
+                  <li class="list-group-item">Kamar mandi di dalam</li>
+                  <li class="list-group-item">Lemari/Nakas</li>
+                  <li class="list-group-item">Kamera CCTV</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <img src="https://www.rsjiwaislam.com/source/Klas%203%20Wanita2.jpg" class="card-img-top" alt="KELAS III (TIGA)">
+          <div class="card-body">
+            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inaptiga" aria-expanded="false" aria-controls="inaptiga">Kelas III (tiga)<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
+            </button>
+            <div class="collapse" id="inaptiga">
+              <div class="card card-body">
+                <ul class="list-group list-group-flush" style="font-size: 11px;">
+                  <li class="list-group-item">2 kamar barak laki-laki</li>
+                  <li class="list-group-item">Kamar wanitas ( 8 TT )</li>
+                  <li class="list-group-item">Kamar mandi di dalam</li>
+                  <li class="list-group-item">Lemari/Nakas</li>
+                  <li class="list-group-item">Exhausfan</li>
+                  <li class="list-group-item">Kamera CCTV</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <img src="https://www.rsjiwaislam.com/source/Isolasi%20Pria.jpg" class="card-img-top" alt="ISOLASI">
+          <div class="card-body">
+            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapisolasi" aria-expanded="false" aria-controls="inapisolasi">Ruang Isolasi<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
+            </button>
+            <div class="collapse" id="inapisolasi">
+              <div class="card card-body">
+                <ul class="list-group list-group-flush" style="font-size: 11px;">
+                  <li class="list-group-item">Kamar dengan 1 tempat tidur</li>
+                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
+                  <li class="list-group-item">Pengawasan Khusus</li>
+                  <li class="list-group-item">Kamera CCTV</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card">
+          <img src="https://www.rsjiwaislam.com/source/observasi.jpg" class="card-img-top" alt="inapobservasi">
+          <div class="card-body">
+            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapobservasi" aria-expanded="false" aria-controls="inapobservasi">Ruang Observasi<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
+            </button>
+            <div class="collapse" id="inapobservasi">
+              <div class="card card-body">
+                <ul class="list-group list-group-flush" style="font-size: 11px;">
+                  <li class="list-group-item">Kamar dengan 5 tempat tidur</li>
+                  <li class="list-group-item">Kipas Angin</li>
+                  <li class="list-group-item">Pengawasan Khusus</li>
+                  <li class="list-group-item">Kamera CCTV</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
 </section>
 
 <section id="jadwal" class="bg-light">
@@ -339,83 +487,15 @@
 </section>
 <section id="testimoni" class="testimoni">
   <div class="container">
-    <h1 style="color:#FFF;">Kata Mereka</h1>
-    <p style="color:#FFF;">Kata mereka yang telah mendapatkan layanan kesehatan mental yang berkelanjutan di Rumah Sakit Islam Jiwa Klender</p>
+    <h1>Kata Mereka</h1>
+    <p>Kata mereka yang telah mendapatkan layanan kesehatan mental yang berkelanjutan di Rumah Sakit Islam Jiwa Klender</p>
     <!-- carousel -->
     <div id="testimoniCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-
-  <div class="carousel-inner" style="background-color: transparent; border: none;">
-    <div class="carousel-item active">
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4 border-0">
-            <div class="card-body">
-              <figure class="mb-0">
-                <blockquote class="blockquote">
-                  <p>"Pelayanan sangat ramah dan cepat."</p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0">
-                  Ahmad <cite title="Source Title">Pasien</cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
-          <div class="card h-100 shadow-sm rounded-4 border-0">
-            <div class="card-body">
-              <figure class="mb-0">
-                <blockquote class="blockquote">
-                  <p>"Dokter profesional dan komunikatif."</p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0">
-                  Siti <cite title="Source Title">Keluarga Pasien</cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 d-none d-lg-block">
-          <div class="card h-100 shadow-sm rounded-4 border-0">
-            <div class="card-body">
-              <figure class="mb-0">
-                <blockquote class="blockquote">
-                  <p>"Fasilitas lengkap dan nyaman."</p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0">
-                  Budi <cite title="Source Title">Pasien</cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="carousel-inner" id="testiContainer" style="background-color: transparent; border: none;">
     </div>
 
-    <div class="carousel-item">
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4 border-0">
-            <div class="card-body">
-              <figure class="mb-0">
-                <blockquote class="blockquote">
-                  <p>"Lingkungan rumah sakit bersih."</p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0">
-                  Rina <cite title="Source Title">Pasien</cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-        </div>
+  <div class="carousel-indicators" id="testiIndicators" style="bottom: -50px;">
     </div>
-  </div>
-
-  <div class="carousel-indicators" style="bottom: -50px;">
-    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="0" class="active bg-primary"></button>
-    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="1" class="bg-primary"></button>
-  </div>
 </div>
     <!-- carousel -->
     
@@ -556,6 +636,8 @@ document.querySelectorAll('#mainNav .nav-link').forEach(link => {
 });
 </script>
 <script type="text/javascript" src="klinik.json"></script>
+<script type="text/javascript" src="testimoni.json"></script>
+<script type="text/javascript" src="jadwal_dokter.json"></script>
 <script>
 $.each(daftar_klinik, function (index, item) {
       const collapseId = 'flush-collapse-' + item.Kode;
@@ -587,6 +669,66 @@ $.each(daftar_klinik, function (index, item) {
       $('#pilihklinik').append(`<option value="${headerId}">${item.klinik}</option>`);
     });
 </script>
+<script>
+  $(document).ready(function() {
 
+    function renderCarousel() {
+        var windowWidth = $(window).width();
+        var itemsPerSlide = (windowWidth < 768) ? 1 : 3; // Jika Mobile 1 kartu, jika Desktop 3 kartu
+        
+        var container = $('#testiContainer');
+        var indicators = $('#testiIndicators');
+        
+        container.empty();
+        indicators.empty();
+
+        for (var i = 0; i < testimoni.length; i += itemsPerSlide) {
+            var activeClass = (i === 0) ? 'active' : '';
+            var slideIndex = i / itemsPerSlide;
+
+            // Tambah Indikator
+            indicators.append(`
+                <button type="button" data-bs-target="#testimoniCarousel" 
+                        data-bs-slide-to="${slideIndex}" 
+                        class="${activeClass} bg-primary"></button>
+            `);
+
+            // Buat Slide
+            var slideHtml = `<div class="carousel-item ${activeClass}"><div class="row g-4 justify-content-center">`;
+
+            // Isi Slide dengan kartu
+            for (var j = i; j < i + itemsPerSlide; j++) {
+                if (testimoni[j]) {
+                    slideHtml += `
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card h-100 rounded-4 border-0">
+                                <div class="card-body">
+                                    <figure class="mb-0">
+                                        <blockquote class="blockquote">
+                                            <p style="font-size: 0.95rem;">"${testimoni[j].testimoni}"</p>
+                                        </blockquote>
+                                        <figcaption class="blockquote-footer mb-0">
+                                            ${testimoni[j].nama}
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>`;
+                }
+            }
+            slideHtml += `</div></div>`;
+            container.append(slideHtml);
+        }
+    }
+
+    // Jalankan saat pertama kali buka
+    renderCarousel();
+
+    // (Opsional) Jalankan ulang jika layar di-resize (misal dari landscape ke portrait)
+    $(window).resize(function() {
+        renderCarousel();
+    });
+});
+</script>
 </body>
   </html>
