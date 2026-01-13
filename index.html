@@ -76,18 +76,6 @@
 .testimoni{
     background-color: #344a79;
 }
-      
-/* .testimoni .card {
-    min-height: 320px;
-    background-image: url("https://lh3.googleusercontent.com/d/11IyyCHXGGdhf_rJKbCJTsyzvc-3Jlyhj=w1000?authuser=1");
-    background-size:cover;
-    background-position: top center;
-}
-
-.testimoni .card-body {
-    padding-top: 130px;
-    padding-left: 55px;
-} */
 
   </style>
   <style>
@@ -135,59 +123,34 @@
     }
   </style>
   <style>
-      #testimoniCarousel{
-            background-image: url("https://lh3.googleusercontent.com/d/11IyyCHXGGdhf_rJKbCJTsyzvc-3Jlyhj=w1000?authuser=1");
-    background-size:cover;
-    background-position: top center;
-    min-height:320px;
-      }
-/* ===== CARD ===== */
-.testimoni-card .card {
-  border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  /* Mengatur durasi fade agar lebih halus (defaultnya 0.6s) */
+#testimoniCarousel.carousel-fade .carousel-item {
+    transition: opacity 0.8s ease-in-out;
 }
 
-.carousel-item .card{
-padding-top: 130px;
-    padding-left: 50px;
-  background: transparent !important;
-  border: none;
-}
-
-
-/* ===== INDIKATOR ===== */
+/* Mengatur posisi indikator agar berada di bawah card, bukan menimpanya */
 .carousel-indicators {
-  position: relative;
-  margin-top: 2rem;
+    position: relative; /* Menaruhnya di luar container slide */
+    margin-top: 30px;
 }
+
 .carousel-indicators [data-bs-target] {
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  background-color: #ccc;
-  transition: all .3s ease;
-}
-.carousel-indicators .active {
-  width: 22px; /* 🔥 aktif 2x lebar */
-  background-color: #0d6efd;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Membuat indikator bulat */
 }
 
-.carousel-item .card {
-  opacity: 0;
-  transform: scale(.9);
-  transition: all .5s ease;
+/* Menghilangkan border default card agar terlihat lebih modern dengan shadow */
+.card {
+    border: none;
+    transition: transform 0.3s ease;
 }
 
-.carousel-item.active .card {
-  opacity: 1;
-  transform: scale(1);
+/* Efek hover opsional */
+.card:hover {
+    transform: translateY(-5px);
 }
-
-.carousel-item.active .col:nth-child(1) .card { transition-delay: .1s; }
-.carousel-item.active .col:nth-child(2) .card { transition-delay: .25s; }
-.carousel-item.active .col:nth-child(3) .card { transition-delay: .4s; }
-
-</style>
+  </style>
 
 </head>
 
@@ -379,126 +342,80 @@ padding-top: 130px;
     <h1 style="color:#FFF;">Kata Mereka</h1>
     <p style="color:#FFF;">Kata mereka yang telah mendapatkan layanan kesehatan mental yang berkelanjutan di Rumah Sakit Islam Jiwa Klender</p>
     <!-- carousel -->
-    
-    
-<div id="testimoniCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div id="testimoniCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 
-  <!-- CAROUSEL -->
-  <div class="carousel-inner" style="background-color: transparent;border: none;">
-
-    <!-- SLIDE 1 -->
+  <div class="carousel-inner" style="background-color: transparent; border: none;">
     <div class="carousel-item active">
       <div class="row g-4">
-
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4">
+          <div class="card h-100 shadow-sm rounded-4 border-0">
             <div class="card-body">
-              <figure>
+              <figure class="mb-0">
                 <blockquote class="blockquote">
-                  <p>Pelayanan sangat ramah dan cepat.</p>
+                  <p>"Pelayanan sangat ramah dan cepat."</p>
                 </blockquote>
-                <figcaption class="blockquote-footer">
-                  Ahmad <cite>Pasien</cite>
+                <figcaption class="blockquote-footer mb-0">
+                  Ahmad <cite title="Source Title">Pasien</cite>
                 </figcaption>
               </figure>
             </div>
           </div>
         </div>
-
         <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
-          <div class="card h-100 shadow-sm rounded-4">
+          <div class="card h-100 shadow-sm rounded-4 border-0">
             <div class="card-body">
-              <figure>
+              <figure class="mb-0">
                 <blockquote class="blockquote">
-                  <p>Dokter profesional dan komunikatif.</p>
+                  <p>"Dokter profesional dan komunikatif."</p>
                 </blockquote>
-                <figcaption class="blockquote-footer">
-                  Siti <cite>Keluarga Pasien</cite>
+                <figcaption class="blockquote-footer mb-0">
+                  Siti <cite title="Source Title">Keluarga Pasien</cite>
                 </figcaption>
               </figure>
             </div>
           </div>
         </div>
-
         <div class="col-lg-4 d-none d-lg-block">
-          <div class="card h-100 shadow-sm rounded-4">
+          <div class="card h-100 shadow-sm rounded-4 border-0">
             <div class="card-body">
-              <figure>
+              <figure class="mb-0">
                 <blockquote class="blockquote">
-                  <p>Fasilitas lengkap dan nyaman.</p>
+                  <p>"Fasilitas lengkap dan nyaman."</p>
                 </blockquote>
-                <figcaption class="blockquote-footer">
-                  Budi <cite>Pasien</cite>
+                <figcaption class="blockquote-footer mb-0">
+                  Budi <cite title="Source Title">Pasien</cite>
                 </figcaption>
               </figure>
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- SLIDE 2 -->
     <div class="carousel-item">
       <div class="row g-4">
-
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm rounded-4">
+          <div class="card h-100 shadow-sm rounded-4 border-0">
             <div class="card-body">
-              <figure>
+              <figure class="mb-0">
                 <blockquote class="blockquote">
-                  <p>Lingkungan rumah sakit bersih.</p>
+                  <p>"Lingkungan rumah sakit bersih."</p>
                 </blockquote>
-                <figcaption class="blockquote-footer">
-                  Rina <cite>Pasien</cite>
+                <figcaption class="blockquote-footer mb-0">
+                  Rina <cite title="Source Title">Pasien</cite>
                 </figcaption>
               </figure>
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
-          <div class="card h-100 shadow-sm rounded-4">
-            <div class="card-body">
-              <figure>
-                <blockquote class="blockquote">
-                  <p>Perawat sangat membantu.</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                  Andi <cite>Keluarga Pasien</cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
         </div>
-
-        <div class="col-lg-4 d-none d-lg-block">
-          <div class="card h-100 shadow-sm rounded-4">
-            <div class="card-body">
-              <figure>
-                <blockquote class="blockquote">
-                  <p>Pelayanan cepat dan terorganisir.</p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                  Dewi <cite>Pasien</cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
-
-  </div>
-  
-  <!-- INDICATOR -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="2"></button>
   </div>
 
+  <div class="carousel-indicators" style="bottom: -50px;">
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="0" class="active bg-primary"></button>
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="1" class="bg-primary"></button>
+  </div>
 </div>
     <!-- carousel -->
     
