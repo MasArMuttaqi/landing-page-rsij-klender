@@ -173,6 +173,47 @@
       box-shadow:0 2px 10px rgba(0,0,0,.04);
     }
 </style>
+<style>
+    /* Buat body offcanvas fleksibel */
+.offcanvas-body-custom{
+  position: relative;
+  padding-bottom: 130px; /* ruang untuk card bawah */
+}
+ .offcanvas-bottom-card{
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 5px;
+  /* background: linear-gradient(to top, #fff 60%, rgba(255,255,255,0)); */
+ background: rgba(100, 100, 100, 0.25); /* Abu-abu transparan */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Shadow sedikit lebih gelap */
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.1); /* Border tipis agar tetap elegan */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition: all 0.3s ease;
+
+
+}
+.offcanvas-bottom-card span{
+    white-space: wrap;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.offcanvas-body-custom img{
+    margin-top: 12px; 
+    height:30px;
+}
+/* Styling card */
+.offcanvas-bottom-card .card{
+  border-radius: 16px;
+  border: none;
+}
+</style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
@@ -235,6 +276,14 @@
         <a class="nav-link" href="#kontak" data-bs-dismiss="offcanvas">Hubungi Kami</a>
       </li>
     </ul>
+
+ <div class="card offcanvas-bottom-card">
+        <div class="card-body d-flex align-items-center justify-content-between gap-3">
+       <span>terima kasih telah memperbaharui tampilan laman kami kepada</span> <img src="https://dkv.isi-ska.ac.id/wp-content/uploads/2022/10/LOGO-ISI-DKV-01-448x165.png"> 
+</div>
+    </div>
+
+
   </div>
 </div>
 
