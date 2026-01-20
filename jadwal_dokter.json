@@ -1,1 +1,147 @@
-var jadwal_dokter = [{"NAMA":"dr. Hj. Prasila Darwin, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"08.00 - 12.00","SELASA":"08.00 - 12.00","RABU":"08.00 - 12.00","KAMIS":"08.00 - 12.00","JUM'AT":"08.00 - 12.00","SABTU":"-"},{"NAMA":"dr. Friendy Ahdimar, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"08.00 - 14.00","SELASA":"08.00 - 14.00","RABU":"08.00 - 14.00","KAMIS":"08.00 - 14.00","JUM'AT":"08.00 - 14.00","SABTU":"-"},{"NAMA":"dr. H. Rusdi Effendi, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"12.00 - 15.00","SELASA":"-","RABU":"12.00 - 15.00","KAMIS":"12.00 - 15.00","JUM'AT":"-","SABTU":"12.00 - 15.00"},{"NAMA":"dr. Hj. Dahsriati (S.), SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"08.00 - 12.00","SELASA":"-","RABU":"-","KAMIS":"08.00 - 12.00","JUM'AT":"08.00 - 12.00","SABTU":"-"},{"NAMA":"dr. Umi Faizah, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"14.00 - 15.00","SELASA":"-","RABU":"14.00 - 15.00","KAMIS":"-","JUM'AT":"14.00 - 15.00","SABTU":"-"},{"NAMA":"dr. Zygawindi Nurhidayati","KLINIK":"Umum","KODE_KLINIK":"KU","SENIN":"09.00 - 15.00","SELASA":"09.00 - 15.00","RABU":"09.00 - 15.00","KAMIS":"09.00 - 15.00","JUM'AT":"09.00 - 15.00","SABTU":"09.00 - 15.00"},{"NAMA":"Novi Maulidta, M.Psi","KLINIK":"Psikologi","KODE_KLINIK":"K2","SENIN":"09.00 - 15.00","SELASA":"09.00 - 15.00","RABU":"09.00 - 15.00","KAMIS":"09.00 - 15.00","JUM'AT":"09.00 - 15.00","SABTU":"-"},{"NAMA":"dr. H. Erie D. Irawan, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"-","SELASA":"08.00 - 12.00","RABU":"-","KAMIS":"-","JUM'AT":"-","SABTU":"08.00 - 12.00"},{"NAMA":"dr. Metta Desvini P.S, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"-","SELASA":"10.00 - 14.00","RABU":"-","KAMIS":"12.00 - 15.00","JUM'AT":"-","SABTU":"-"},{"NAMA":"dr. Deasyanti, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"-","SELASA":"16.00 - 18.00","RABU":"-","KAMIS":"-","JUM'AT":"13.00 - 15.00","SABTU":"-"},{"NAMA":"Dr. Evi Syafrida N., M.Psi","KLINIK":"Psikologi","KODE_KLINIK":"K2","SENIN":"-","SELASA":"15.30 - 18.00","RABU":"-","KAMIS":"-","JUM'AT":"-","SABTU":"09.00 - 15.00"},{"NAMA":"dr. H. Isa Multazam, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"-","SELASA":"-","RABU":"-","KAMIS":"-","JUM'AT":"-","SABTU":"13.30 - 15.00"},{"NAMA":"dr. Hj Ni Wayan Ani P, SpKJ","KLINIK":"Psikiatri","KODE_KLINIK":"K1","SENIN":"-","SELASA":"-","RABU":"-","KAMIS":"-","JUM'AT":"-","SABTU":"09.00 - 12.00"}]
+var jadwal_dokter = [
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "dr. Hj. Prasila Darwin, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "senin": "08.00 - 12.00",
+      "selasa": "08.00 - 12.00",
+      "rabu": "08.00 - 12.00",
+      "kamis": "08.00 - 12.00",
+      "jumat": "08.00 - 12.00"
+    }
+  },
+  {
+    "kode_dokter": 1,
+    "nama_dokter": "dr. Friendly Ahdimar, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "senin": "08.00 - 14.00",
+      "selasa": "08.00 - 14.00",
+      "rabu": "08.00 - 14.00",
+      "kamis": "08.00 - 14.00",
+      "jumat": "08.00 - 14.00"
+    }
+  },
+  {
+    "kode_dokter": 1,
+    "nama_dokter": "dr. H. Rusdi Effendi, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "senin": "12.00 - 15.00",
+      "rabu": "12.00 - 15.00",
+      "kamis": "12.00 - 15.00",
+      "sabtu": "12.00 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "dr. Hj. Dahsriati (S.), SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "senin": "08.00 - 12.00",
+      "kamis": "08.00 - 12.00",
+      "jumat": "08.00 - 12.00"
+    }
+  },
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "dr. Umi Faizah, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "senin": "14.00 - 15.00",
+      "rabu": "14.00 - 15.00",
+      "jumat": "14.00 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "dr. Zygawindi Nurhidayati",
+    "nama_klinik": "Umum",
+    "kode_klinik": "K6",
+    "jadwal_praktik": {
+      "senin": "09.00 - 15.00",
+      "selasa": "09.00 - 15.00",
+      "rabu": "09.00 - 15.00",
+      "kamis": "09.00 - 15.00",
+      "jumat": "09.00 - 15.00",
+      "sabtu": "09.00 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "Novi Maulida, M.Psi",
+    "nama_klinik": "Psikologi",
+    "kode_klinik": "K2",
+    "jadwal_praktik": {
+      "senin": "09.00 - 15.00",
+      "selasa": "09.00 - 15.00",
+      "rabu": "09.00 - 15.00",
+      "kamis": "09.00 - 15.00",
+      "jumat": "09.00 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 1,
+    "nama_dokter": "dr. H. Erie D. Irawan, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "selasa": "08.00 - 12.00",
+      "sabtu": "08.00 - 12.00"
+    }
+  },
+  {
+    "kode_dokter": 1,
+    "nama_dokter": "dr. Metta Desvini P.S, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "selasa": "10.00 - 14.00",
+      "kamis": "12.00 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "dr. Deasyanti, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "selasa": "16.00 - 18.00",
+      "jumat": "13.00 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "Dr. Evi Syafrida N., M.Psi",
+    "nama_klinik": "Psikologi",
+    "kode_klinik": "K2",
+    "jadwal_praktik": {
+      "selasa": "15.30 - 18.00",
+      "sabtu": "09.00 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 1,
+    "nama_dokter": "dr. H. Isa Multazam, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "sabtu": "13.30 - 15.00"
+    }
+  },
+  {
+    "kode_dokter": 2,
+    "nama_dokter": "dr. Hj Ni Wayan Ani P, SpKJ",
+    "nama_klinik": "Psikiatri",
+    "kode_klinik": "K1",
+    "jadwal_praktik": {
+      "sabtu": "09.00 - 12.00"
+    }
+  }
+]
