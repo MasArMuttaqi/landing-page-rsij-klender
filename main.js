@@ -283,7 +283,7 @@
                 $container.append(cardHtml);
             });
         } else {
-            $container.append('<div class="col-12 text-center py-5">Jadwal tidak ditemukan</div>');
+            $container.append('<div class="service-card bg-orange"><div class="icon-box text-orange"><img src="https://cdn-icons-png.flaticon.com/128/9841/9841569.png" style="width: 40px; height: 40px;"></div><div><h6 class="mb-1 fw-semibold">Mohon maaf, Jadwal dokter tidak ditemukan. </h6><small>Customer Care siap membantu membuat janji temu Anda.</small></div></div>');
         }
     }
 
