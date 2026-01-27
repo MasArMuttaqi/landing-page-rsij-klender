@@ -67,7 +67,7 @@ var data_dokter = [
   {
     "NAMA_DOKTER": "dr. Zygawindi Nurhidayati",
     "NAMA_KLINIK": "Umum",
-    "KODE_KLINIK": "K3",
+    "KODE_KLINIK": "K2",
     "HARI_JAM_PRAKTEK": {
       "SENIN": "09.00 - 15.00",
       "SELASA": "09.00 - 15.00",
@@ -80,7 +80,7 @@ var data_dokter = [
   {
     "NAMA_DOKTER": "Novi Maulidta, M.Psi",
     "NAMA_KLINIK": "Psikologi",
-    "KODE_KLINIK": "K2",
+    "KODE_KLINIK": "K3",
     "HARI_JAM_PRAKTEK": {
       "SENIN": "09.00 - 15.00",
       "SELASA": "09.00 - 15.00",
@@ -132,7 +132,7 @@ var data_dokter = [
   {
     "NAMA_DOKTER": "Dr. Evi Syafrida N., M.Psi",
     "NAMA_KLINIK": "Psikologi",
-    "KODE_KLINIK": "K2",
+    "KODE_KLINIK": "K3",
     "HARI_JAM_PRAKTEK": {
       "SENIN": "-",
       "SELASA": "15.30 - 18.00",
