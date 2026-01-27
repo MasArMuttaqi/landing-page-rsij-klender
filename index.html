@@ -7,301 +7,22 @@
   <!-- Favicons -->
   <link href="https://www.rsjiwaislam.com/assets/img/LOGO_RS_JIWA_KLENDER_BARUwebb.jpg" rel="icon">
   <link href="https://www.rsjiwaislam.com/assets/img/LOGO_RS_JIWA_KLENDER_BARUwebb.jpg" rel="apple-touch-icon">
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Icon -->
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css">
-   <!-- font -->
+<!-- font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Momo+Signature&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<link rel="stylesheet" href="style.css">
 
-    body {
-      position: relative;
-    }
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    section {
-      min-height: 100vh;
-      padding: 100px 20px;
-      scroll-margin-top: var(--nav-offset);
-    }
-
-    .btn-emergency {
-      background-color: #ffeef6;
-      border: none;
-      color: #d80073;
-      font-weight: 500;
-    }
-
-    /* 🔥 Highlight menu aktif */
-    .nav-link {
-      color: #555;
-      font-weight: 500;
-      border-radius: 8px;
-      padding: 10px 14px;
-      transition: all .3s ease;
-    }
-
-    .nav-link.active {
-      background-color: #e7f1ff;
-      color: #0d6efd;
-      font-weight: 600;
-    }
-    
-.bg-hotline {
-  background-image: url("https://lh3.googleusercontent.com/d/1gsuMTFxNNC6ckTUFiwNQpSN5x5u2ORgH=w1000?authuser=1");
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  /* Optional: Other background properties */
-  background-size: contain; /* Uses the image's natural size */
-  background-color: #0e3f84; /* Fallback color */
-  color:#FFF;
-  /* Ensure the element has a defined size or content for the background to appear */
-  min-height: 200px; 
-  width: 100%;
-}
-
-.spesialisasi{
-    background-image: url("https://i.pinimg.com/736x/2c/6d/15/2c6d15b657a983e7531b9196aa8a11b1.jpg");
-    background-size:cover;
-}
-
-.spesialisasi .accordion-body{
-  font-size: 11pt;
-  font-weight: 200;
-  line-height: 1.3;
-}
-  </style>
-  <style>
-    .beranda {
-   min-height: 100vh;
-   padding-bottom: 110px; /* ruang untuk logo */
-    background-image: url("https://i.pinimg.com/736x/2c/6d/15/2c6d15b657a983e7531b9196aa8a11b1.jpg");
-    background-size: cover;
-    background-position: left bottom;
-}
-
-.beranda h5{
-  font-family: "Philosopher", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.typewriter h3 {
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
-  border-right: .15em solid orange;
-  width: fit-content;
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-
-.section-logo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f8f9fa;
-  overflow: hidden;
-  padding: 1rem 0;
-}
-
-/* marquee */
-.logo-marquee {
-  display: flex;
-  width: max-content;
-  animation: scroll 25s linear infinite;
-}
-
-.logo-marquee:hover {
-  animation-play-state: paused;
-}
-
-.logo-item {
-  margin-right: 2rem;
-}
-
-.logo-item img {
-  height: 20px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: .8;
-  transition: .3s;
-}
-
-.logo-item img:hover {
-  filter: none;
-  opacity: 1;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-  </style>
-  <style>
-    .info-card{
-      background:#fff;
-      border-radius:24px;
-      padding:24px;
-      box-shadow:0 2px 10px rgba(0,0,0,.04);
-      display:flex;
-      gap:20px;
-      align-items:flex-start;
-    }
-    .info-icon{
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      background:#e9f0ff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#4a76d1;
-      font-size:22px;
-      flex-shrink:0;
-    }
-    .info-icon img{
-       width:30px;
-      height:30px; 
-    }
-    .info-title{
-      font-size:14px;
-      color:#8a8a8a;
-      margin-bottom:6px;
-    }
-    .info-text{
-      font-size:20px;
-      font-weight:700;
-      line-height:1.4;
-      color:#000;
-    }
-
-    @media (max-width:576px){
-      .info-text{
-        font-size:12px;
-      }
-    }
-  </style>
-  <style>
-    .testimoni{
-        background-color: #d0c6b2;
-    }
-
-    .testimoni .card{
-      background-image: url(https://i.pinimg.com/736x/c6/32/e1/c632e17b04ace45051c480ae0bb61157.jpg);
-      background-size: cover;
-      min-height: 424px;
-      background-position: center center;
-    }
-
-    .testimoni .card .card-body{
-      padding: 113px 60px 60px;
-    } 
-
-      /* Mengatur durasi fade agar lebih halus (defaultnya 0.6s) */
-    #testimoniCarousel.carousel-fade .carousel-item {
-        transition: opacity 0.8s ease-in-out;
-    }
-
-    /* Mengatur posisi indikator agar berada di bawah card, bukan menimpanya */
-    .carousel-indicators {
-        position: relative; /* Menaruhnya di luar container slide */
-        margin-top: 30px;
-    }
-
-    .carousel-indicators [data-bs-target] {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%; /* Membuat indikator bulat */
-    }
-
-    /* Menghilangkan border default card agar terlihat lebih modern dengan shadow */
-    .card {
-        border: none;
-        transition: transform 0.3s ease;
-    }
-
-    /* Efek hover opsional */
-    .card:hover {
-        transform: translateY(-5px);
-    }
-  </style>
-<style>
-    .card-doctor-schedule{
-      background:#fff;
-      border-radius:24px;
-      border: 0 !important;
-      padding:24px;
-      box-shadow:0 2px 10px rgba(0,0,0,.04);
-    }
-</style>
-<style>
-    /* Buat body offcanvas fleksibel */
-.offcanvas-body-custom{
-  position: relative;
-  padding-bottom: 130px; /* ruang untuk card bawah */
-}
- .offcanvas-bottom-card{
-  position: absolute;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px;
-  /* background: linear-gradient(to top, #fff 60%, rgba(255,255,255,0)); */
- background: rgba(100, 100, 100, 0.25); /* Abu-abu transparan */
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Shadow sedikit lebih gelap */
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.1); /* Border tipis agar tetap elegan */
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-transition: all 0.3s ease;
-
-
-}
-.offcanvas-bottom-card span{
-    white-space: wrap;
-    font-size: 12px;
-    line-height: 1.5;
-}
-.offcanvas-bottom-card img{
-    margin-top: 12px; 
-    height:30px;
-}
-/* Styling card */
-.offcanvas-bottom-card .card{
-  border-radius: 16px;
-  border: none;
-}
-</style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
@@ -310,8 +31,7 @@ transition: all 0.3s ease;
 <nav id="navbar" class="navbar navbar-expand-sm fixed-top shadow-sm bg-white">
   <div class="container-fluid">
     <a class="navbar-brand" href="#beranda">
-      <img src="https://i0.wp.com/sinarmu.co/wp-content/uploads/2022/08/muhammadiyah.png?zoom=3&resize=220%2C218&ssl=1"
-           style="width:40px;" class="rounded-pill">
+      <img src="https://muhammadiyahjateng.or.id/wp-content/uploads/2025/09/image-12.png" style="height:55px;" class="rounded-pill">
       <img src="https://lh3.googleusercontent.com/d/1n6_fl_H0pkBgQuBsI_jaxMv4nA08t4Om=w1000?authuser=1"
            style="height:50px;">
     </a>
@@ -323,7 +43,7 @@ transition: all 0.3s ease;
     <button class="btn btn-sm btn-light"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight">
-      <i class="fi fi-sc-bars-staggered"></i>
+      <img src="https://cdn-icons-png.flaticon.com/128/12497/12497810.png" style="height: 20px;">
     </button>
   </div>
 </nav>
@@ -331,7 +51,7 @@ transition: all 0.3s ease;
 <!-- OFFCANVAS -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
   <div class="offcanvas-header">
-    <img src="https://lh3.googleusercontent.com/d/1Qj9YQ8tAAWoUeUC1soIM3FNFZqrO7pPQ=w1000?authuser=1"
+    <img src="https://lh3.googleusercontent.com/d/1wg0OH408UuRnIaS8-lhglsthFDCMPi5O=w1000?authuser=1"
          style="height:40px;">
     <button class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
@@ -345,18 +65,17 @@ transition: all 0.3s ease;
         <a class="nav-link" href="#tentang" data-bs-dismiss="offcanvas">Tentang</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#poli" data-bs-dismiss="offcanvas">Layanan Rumah Sakit</a>
+        <a class="nav-link" href="#poli" data-bs-dismiss="offcanvas">Spesialisasi</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#jadwal" data-bs-dismiss="offcanvas">Jadwal Dokter</a>
       </li>
-<li class="nav-item">
+      <li class="nav-item">
+        <a class="nav-link" href="#fasilitas" data-bs-dismiss="offcanvas">Rawat Inap</a>
+      </li>
+       <li class="nav-item">
         <a class="nav-link" href="#helpdesk" class="btn btn-info" data-bs-dismiss="offcanvas">Customer Care</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#fasilitas" data-bs-dismiss="offcanvas">Fasilitas Layanan</a>
-      </li>
-       
       <li class="nav-item">
         <a class="nav-link" href="#testimoni" class="btn btn-info" data-bs-dismiss="offcanvas">Kata Mereka</a>
       </li>
@@ -364,84 +83,150 @@ transition: all 0.3s ease;
         <a class="nav-link" href="#kontak" data-bs-dismiss="offcanvas">Hubungi Kami</a>
       </li>
     </ul>
+    
+    <div class="d-flex justify-content-center gap-3 my-5"> 
+          <!-- Placeholder Akreditasi -->
+          <div class="akreditasi">
+            <img src="https://rsikendal.com/profile/web/images/SNARS-putih.png" alt="Akreditasi RS">
+          </div>
 
- <div class="card offcanvas-bottom-card">
+          <!-- Placeholder BPJS -->
+          <div class="akreditasi">
+            <img src="https://www.bpjs-kesehatan.go.id/assets/img/logo/logo-color.svg" alt="BPJS Kesehatan">
+          </div>
+
+     </div>
+
+  
+    <div class="card offcanvas-bottom-card">
         <div class="card-body d-flex align-items-center justify-content-between gap-3">
-       <span>terima kasih telah memperbaharui tampilan laman kami kepada</span> <img src="https://dkv.isi-ska.ac.id/wp-content/uploads/2022/10/LOGO-ISI-DKV-01-448x165.png"> 
-</div>
+       <span>terima kasih telah memperbaharui tampilan laman kami kepada</span> <img src="https://dkv.isi-ska.ac.id/wp-content/uploads/2022/10/LOGO-ISI-DKV-01-448x165.png"> </div>
     </div>
-
-
   </div>
 </div>
 
 <!-- SECTION -->
 <section id="beranda" class="beranda bg-light position-relative">
-  <div class="container">
+  <div class="container py-5">
     <h5>Selamat datang,</h5>
-    <div class="typewriter">
+    <div class="typewriter mb-3">
        <h3>di RSIJ Klender</h3> 
     </div>
+
+  <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.rsjiwaislam.com/assets/img/banner/rehabilitasi_psikosial_(50_x_25_in)_(5).png" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.rsjiwaislam.com/assets/img/banner/flyerr.png" class="d-block w-100" alt="">
+      </div>
     </div>
-    <!-- LOGO KERJASAMA -->
+  </div>
+
+  <!-- Search Card -->
+  <div class="search-card">
+    <div class="row align-items-center gap-4">
+        <!-- item menu cepat -->
+      <div class="col-3 search-item">
+        <div class="container">
+            <a href="#jadwal" style="text-decoration: none;">
+           <div class="icon-wrapper">
+                <div class="bg-layer"></div> 
+          <div class="glass-layer">
+      <img src="https://cdn-icons-png.flaticon.com/128/4189/4189146.png" alt="Home Icon" class="home-icon">
+          </div>
+       </div>
+          <p class="label">Jadwal Dokter</p>
+          </a>
+          </div>
+      </div>
+        <!-- item menu cepat -->
+        <!-- item menu cepat -->
+      <div class="col-3 search-item">
+        <div class="container">
+            <a href="#helpdesk" style="text-decoration: none;">
+           <div class="icon-wrapper">
+                <div class="bg-layer"></div> 
+          <div class="glass-layer">
+      <img src="https://cdn-icons-png.flaticon.com/128/11811/11811336.png" alt="Home Icon" class="home-icon">
+          </div>
+       </div>
+          <p class="label">Reservasi Kontrol</p>
+          </a>
+          </div>
+      </div>
+        <!-- item menu cepat -->
+       <!-- item menu cepat -->
+      <div class="col-3 search-item">
+        <div class="container">
+            <a href="#promo" style="text-decoration: none;">
+           <div class="icon-wrapper">
+                <div class="bg-layer"></div> 
+          <div class="glass-layer">
+      <img src="https://cdn-icons-png.flaticon.com/128/4003/4003833.png" alt="Home Icon" class="home-icon">
+          </div>
+       </div>
+          <p class="label">Penawaran RSIJ</p>
+         </a>
+       </div>
+      </div>
+        <!-- item menu cepat --> 
+
+    </div>
+  </div>
+    
+    
+    
+    
+  </div>
+
+  <!-- LOGO KERJASAMA -->
   <div class="section-logo">
     <div class="logo-marquee">
 
       <!-- LOGO SET -->
       <div class="logo-item"><img src="https://dummyimage.com/200x80/ff6f00/fff&text=Partner"></div>
-      <div class="logo-item"><img src="https://lh3.googleusercontent.com/d/1-wZT3mRJsm3RBR9WrQmi3_OrORYd5fN3=w1000?authuser=1" style="transform: scale(3);"></div>
-      <div class="logo-item"><img src="https://www.bpjs-kesehatan.go.id/assets/img/logo/logo-color.svg"></div>
-      <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/BPJS_Ketenagakerjaan_logo.svg"></div>
-      <div class="logo-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnVpWGJ08vmv6ye_q-Bj_HCqI_NKH2g7YvgSh8NlYXqw&s=10"></div>
-      <div class="logo-item"><img src="https://kars.or.id/wp-content/uploads/2024/01/logo-kars-garis-putih.png"></div>
-      <div class="logo-item"><img src="https://www.kemkes.go.id/image/images/logo_kemkes_jadi.png"></div>
-       <div class="logo-item"><img src="https://umj.ac.id/storage/2024/09/ver-1_FKK-1-1024x330.png"></div>
-      <div class="logo-item"><img src="https://dummyimage.com/200x80/ff6f00/fff&text=Partner"></div>
-
+      <div class="logo-item"><img src="https://lh3.googleusercontent.com/d/1-wZT3mRJsm3RBR9WrQmi3_OrORYd5fN3=w1000?authuser=1" style="transform: scale(3); margin-right: 15px;"></div>
     </div>
-    <!-- LOGO KERJASAMA -->
   </div>
 </section>
 
 <section id="helpdesk" class="bg-hotline">
   <div class="container">
     <h1><em>Customer Care</em></h1>
-    <p>Kini Whatsapp <em>Customer Care</em> untuk menjawab kebutuhan layanan kesehatan jiwa</p>
+    <p>Kini <strong>Whatsapp <em>Customer Care</em> Rumah Sakit Islam Jiwa Klender </strong> untuk menjawab kebutuhan layanan kesehatan jiwa anda</p>
     <div class="row">
-      <div class="col-md-6">
-        <div class="info-card mb-4">
-          <div class="info-icon">
-            <img src="https://cdn-icons-png.flaticon.com/128/7474/7474981.png" alt="telemedecine">
-          </div>
-          <div>
-            <div class="info-title fw-bold">Hotline telemedecine</div>
-            <div class="info-text">
-              <a href="#" class="btn btn-primary"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" style="height:20px;"> 0813-9835-8322</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="info-card mb-4">
-          <div class="info-icon">
-            <img src="https://cdn-icons-png.flaticon.com/128/11411/11411524.png" alt="telemedecine">
-          </div>
-          <div>
-            <div class="info-title fw-bold">Reservasi kontrol ulang pasien JKN/BPJS</div>
-            <div class="info-text">
-             dapat dilakukan H-1 sesuai jadwal kontrol, yang harus disiapkan untuk reservasi salinan :
-      <ol>
-          <li>Surat Rujukan</li>
-          <li>Surat Kontrol</li>
-          <li>Kartu BPJS</li>
-      </ol>
-      <a href="#" class="btn btn-primary"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" style="height:20px;"> 0811-1588-112</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="col-md-6 mb-3 mt-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Hotline Telemedecine</h5>
+          <a href="https://wa.me/6281398358322" class="btn btn-whatsapp rounded-pill shadow-sm">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png">
+        0813-9835-8322
+      </a>
       </div>
     </div>
+    </div>
+    <div class="col-md-6 mb-3 mt-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Reservasi kontrol ulang pasien JKN/BPJS</h5>
+          <p class="card-text">
+              Maksimal dapat dilakukan H-1 sesuai jadwal kontrol, yang harus disiapkan untuk reservasi salinan :
+            <ol>
+                <li>Surat Rujukan</li>
+                <li>Surat Kontrol</li>
+                <li>Kartu BPJS</li>
+            </ol>
+          </p>
+          <a href="#" class="btn btn-whatsapp rounded-pill shadow-sm"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png"> 0811-1588-112</a>
+        </div>
+      </div>
+    </div>
+</div>
+  
+    
   </div>
 </section>
 
@@ -449,243 +234,447 @@ transition: all 0.3s ease;
   <div class="container">
     <h1>Tentang</h1>
     <p>Informasi rumah sakit.</p>
-    <div class="info-card mb-4">
-        
+    
+    <div class="news-heading-container">
+      <h1 class="news-heading">Berita</h1>
+      <div class="news-line"></div>
     </div>
+    <!-- card berita -->
+    <!-- card artikel -->
+    <div class="card mb-3">
+  <img src="https://media.istockphoto.com/id/1340466022/photo/close-up-of-a-paint-roller-on-the-wall.jpg?s=612x612&w=0&k=20&c=ijnlnrDHnjtj-Vry37BNW-QJ4s8o8SY_zHdI78JfoVk=" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Proses Perbaikan</h5>
+    <p class="card-text">Konten ini dalam proses perbaikan, kami akan menampilkan informasi kembali secepatnya</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated Manajemen Teknologi Informasi</small></p>
+  </div>
+</div>
+    <!-- card artikel -->
+    <!-- card berita -->
+    
+    
+    <div class="news-heading-container">
+      <h1 class="news-heading">Artikel Kesehatan Mental</h1>
+      <div class="news-line"></div>
+    </div>
+    <!-- card artikel -->
+    <div class="card mb-3">
+  <img src="https://media.istockphoto.com/id/1340466022/photo/close-up-of-a-paint-roller-on-the-wall.jpg?s=612x612&w=0&k=20&c=ijnlnrDHnjtj-Vry37BNW-QJ4s8o8SY_zHdI78JfoVk=" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Proses Perbaikan</h5>
+    <p class="card-text">Konten ini dalam proses perbaikan, kami akan menampilkan informasi kembali secepatnya</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated Manajemen Teknologi Informasi</small></p>
+  </div>
+</div>
+    <!-- card artikel -->
+    <div class="news-heading-container">
+      <h1 class="news-heading">Video</h1>
+      <div class="news-line"></div>
+    </div>
+
+<!-- card artikel -->
+    <div class="card mb-3">
+  <img src="https://st2.depositphotos.com/4202565/7675/v/450/depositphotos_76756387-stock-illustration-video-player-with-black.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Proses Perbaikan</h5>
+    <p class="card-text">Konten ini dalam proses perbaikan, kami akan menampilkan informasi kembali secepatnya</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated Manajemen Teknologi Informasi</small></p>
+  </div>
+</div>
+    <!-- card artikel -->
+
+
+  </div>
+</section>
+
+<section id="promo">
+  <div class="container">
+    <div class="news-heading-container">
+      <h1 class="news-heading">Penawaran</h1>
+      <div class="news-line"></div>
+    </div>
+      <!-- card promo -->
+    <div class="card mb-3">
+  <img src="https://media.istockphoto.com/id/1340466022/photo/close-up-of-a-paint-roller-on-the-wall.jpg?s=612x612&w=0&k=20&c=ijnlnrDHnjtj-Vry37BNW-QJ4s8o8SY_zHdI78JfoVk=" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Proses Perbaikan</h5>
+    <p class="card-text">Konten ini dalam proses perbaikan, kami akan menampilkan informasi kembali secepatnya</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated Manajemen Teknologi Informasi</small></p>
+  </div>
+</div>
+<!-- card promo -->
+    
     
   </div>
 </section>
-
 <section id="poli" class="bg-light spesialisasi">
   <div class="container">
-    <h1>Layanan Rumah Sakit</h1>
-    <p>Layanan kesehatan mental berbasis empati, keahlian, dan standar medis menjadi ruang aman untuk pemulihan dan keseimbangan jiwa untuk kesehatan mental yang berkelanjutan.</p>
-    <div class="info-card mb-4">
-       <div class="accordion accordion-flush" id="accordionFlushExample" style="width:100%"></div> 
+    <h1>Spesialisasi</h1>
+    <p>Layanan kesehatan mental berbasis empati, keahlian, dan standar medis.</p>
+
+  
+ <!-- daftar layanan -->
+
+  <div class="row g-2" id="daftar_klinik"> 
+      <div class="col-6">
+      <button class="btn btn-light info-card d-flex flex-column align-items-center w-100 py-3 shadow-sm btn-poli" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
+        <!-- <img src="https://d1e8la4lqf1h28.cloudfront.net/images/76995b0a-276f-4341-93d5-9bd7544df798_category_image_url.webp" class="icon-img"> -->
+        
+        <div class="glass-layer">
+       <!-- <img src="https://lh3.googleusercontent.com/d/1kUHvETVvPr63lbceOExm3X3Jx-DjWoLu=w1000?authuser=1" class="icon-img"> -->
+       <img src="https://d1e8la4lqf1h28.cloudfront.net/images/76995b0a-276f-4341-93d5-9bd7544df798_category_image_url.webp" class="icon-img">
+       </div>
+        <span class="text-label">Klinik Psikiatri</span>
+      </button>
     </div>
-    <h3>Rawat Inap</h3>
-    <div class="row">
 
-      <div class="col-6">
-        <div class="card">
-          <img src="https://www.rsjiwaislam.com/source/kelas%20utama.jpg" class="card-img-top" alt="KELAS UTAMA">
-          <div class="card-body">
-            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inaputama" aria-expanded="false" aria-controls="inaputama">Kelas Utama<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
-            </button>
-            <div class="collapse" id="inaputama">
-              <div class="card card-body">
-                <ul class="list-group list-group-flush" style="font-size: 11px;">
-                  <li class="list-group-item">Kamar dengan 1 tempat tidur</li>
-                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
-                  <li class="list-group-item">Televisi LED</li>
-                  <li class="list-group-item">Lemari Es</li>
-                  <li class="list-group-item">Sofa Tunggu</li>
-                  <li class="list-group-item">Teras dan Kursi Taman</li>
-                  <li class="list-group-item">Kamar mandi di dalam</li>
-                  <li class="list-group-item">Ruang tunggu pasien khusus</li>
-                  <li class="list-group-item">Pintu besuk pengunjung tersendiri</li>
-                  <li class="list-group-item">Lemari kecil</li>
-                  <li class="list-group-item">Pengharum ruangan</li>
-                  <li class="list-group-item">Kamera CCTV</li>
-              </ul>
-              </div>
-            </div>
-          </div>
+    <div class="col-6">
+      <button class="btn btn-light info-card btn-poli d-flex flex-column align-items-center w-100 py-3 shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLainnya">
+          
+          <div class="glass-layer">
+        <!-- <img src="https://d1e8la4lqf1h28.cloudfront.net/images/d8b7c9e4-bc99-4297-ac15-44a3a51d16a3_category_image_url.webp" class="icon-img"> -->
+         <img src="https://lh3.googleusercontent.com/d/1sobKohGSDpk0DFVYdVcqEjA7P_iPD39x=w1000?authuser=1" class="icon-img">
         </div>
-      </div>
+        <span class="text-label">Klinik Umum</span>
+      </button>
+    </div>
+    
+    <div class="col-6">
+      <button class="btn btn-light info-card d-flex flex-column align-items-center w-100 py-3 shadow-sm btn-poli" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLainnya">
+        <img src="https://d1e8la4lqf1h28.cloudfront.net/images/65cc3d18-0174-4c61-aa2a-b4645ce29206_category_image_url.webp" class="icon-img">
+        <span class="text-label">Klinik Psikologi Klinis</span>
+      </button>
+    </div>
+    
+    <div class="col-6">
+      <button class="btn btn-light info-card btn-poli d-flex flex-column align-items-center w-100 py-3 shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLainnya">
+        <img src="https://d2qjkwm11akmwu.cloudfront.net/images/765003_16-9-2022_15-19-2.webp" class="icon-img">
+        <span class="text-label">Klinik Pertumbuhan Anak</span>
+      </button>
+    </div>
+    
+    <div class="col-6">
+      <button class="btn btn-light info-card btn-poli d-flex flex-column align-items-center w-100 py-3 shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLainnya">
+        <img src="https://d2qjkwm11akmwu.cloudfront.net/images/270386_12-9-2022_14-32-7.webp" class="icon-img">
+        <span class="text-label">Rehabilitasi Psikososial</span>
+      </button>
+    </div>
 
-      <div class="col-6">
-        <div class="card">
-          <img src="https://www.rsjiwaislam.com/source/Kelas%201%20pria.jpg" class="card-img-top" alt="KELAS I (SATU)">
-          <div class="card-body">
-            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapsatu" aria-expanded="false" aria-controls="inapsatu">Kelas I (satu)<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
-            </button>
-            <div class="collapse" id="inapsatu">
-              <div class="card card-body">
-                <ul class="list-group list-group-flush" style="font-size: 11px;">
-                  <li class="list-group-item">Kamar dengan 3 tempat tidur</li>
-                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
-                  <li class="list-group-item">Televisi</li>
-                  <li class="list-group-item">Lemari Es</li>
-                  <li class="list-group-item">Teras dan Kursi Taman</li>
-                  <li class="list-group-item">Kamar mandi di dalam</li>
-                  <li class="list-group-item">Lemari/Nakas</li>
-                  <li class="list-group-item">Kamera CCTV</li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="col-6">
+      <button class="btn btn-light info-card btn-poli d-flex flex-column align-items-center w-100 py-3 shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLainnya">
+       <!--  <img src="https://t3.ftcdn.net/jpg/05/62/11/80/360_F_562118087_sFoIcdMeH1KhJAqz2C4jA8BTwcjQIQ9m.jpg" class="icon-img"> -->
+       
+       <div class="glass-layer">
+       <img src="https://lh3.googleusercontent.com/d/1eUojdAf6M9IuqYi5yyhkj0zVkz8BWBw4=w1000?authuser=1" class="icon-img">
+       </div>
+        <span class="text-label">Rehabilitasi Spiritual</span>
+      </button>
+    </div>
 
-      <div class="col-6">
-        <div class="card">
-          <img src="https://www.rsjiwaislam.com/source/Klas%202%20Pria.jpg" class="card-img-top" alt="KELAS II (DUA)">
-          <div class="card-body">
-            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapdua" aria-expanded="false" aria-controls="inapdua">Kelas II (dua)<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
-            </button>
-            <div class="collapse" id="inapdua">
-              <div class="card card-body">
-                <ul class="list-group list-group-flush" style="font-size: 11px;">
-                  <li class="list-group-item">Kamar dengan 4 tempat tidur</li>
-                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
-                  <li class="list-group-item">Kamar mandi di dalam</li>
-                  <li class="list-group-item">Lemari/Nakas</li>
-                  <li class="list-group-item">Kamera CCTV</li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-6">
-        <div class="card">
-          <img src="https://www.rsjiwaislam.com/source/Klas%203%20Wanita2.jpg" class="card-img-top" alt="KELAS III (TIGA)">
-          <div class="card-body">
-            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inaptiga" aria-expanded="false" aria-controls="inaptiga">Kelas III (tiga)<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
-            </button>
-            <div class="collapse" id="inaptiga">
-              <div class="card card-body">
-                <ul class="list-group list-group-flush" style="font-size: 11px;">
-                  <li class="list-group-item">2 kamar barak laki-laki</li>
-                  <li class="list-group-item">Kamar wanitas ( 8 TT )</li>
-                  <li class="list-group-item">Kamar mandi di dalam</li>
-                  <li class="list-group-item">Lemari/Nakas</li>
-                  <li class="list-group-item">Exhausfan</li>
-                  <li class="list-group-item">Kamera CCTV</li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6">
-        <div class="card">
-          <img src="https://www.rsjiwaislam.com/source/Isolasi%20Pria.jpg" class="card-img-top" alt="ISOLASI">
-          <div class="card-body">
-            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapisolasi" aria-expanded="false" aria-controls="inapisolasi">Ruang Isolasi<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
-            </button>
-            <div class="collapse" id="inapisolasi">
-              <div class="card card-body">
-                <ul class="list-group list-group-flush" style="font-size: 11px;">
-                  <li class="list-group-item">Kamar dengan 1 tempat tidur</li>
-                  <li class="list-group-item">Ruangan Berpendingin (AC)</li>
-                  <li class="list-group-item">Pengawasan Khusus</li>
-                  <li class="list-group-item">Kamera CCTV</li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6">
-        <div class="card">
-          <img src="https://www.rsjiwaislam.com/source/observasi.jpg" class="card-img-top" alt="inapobservasi">
-          <div class="card-body">
-            <button class="btn card-title" type="button" data-bs-toggle="collapse" data-bs-target="#inapobservasi" aria-expanded="false" aria-controls="inapobservasi">Ruang Observasi<br><img src="https://cdn-icons-png.flaticon.com/128/4212/4212336.png" width="15px">
-            </button>
-            <div class="collapse" id="inapobservasi">
-              <div class="card card-body">
-                <ul class="list-group list-group-flush" style="font-size: 11px;">
-                  <li class="list-group-item">Kamar dengan 5 tempat tidur</li>
-                  <li class="list-group-item">Kipas Angin</li>
-                  <li class="list-group-item">Pengawasan Khusus</li>
-                  <li class="list-group-item">Kamera CCTV</li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  </div>
+  <!-- daftar layanan -->
+  
+  
+  
+  <div class="row g-2 my-3"> 
+   <div class="info-card">
+  <div class="card-body">
+    <h5 class="card-title">Layanan Penunjang Medis</h5>
+    <div class="container layanan_penunjang py-5">
+  <div class="service-card bg-purple">
+    <div class="icon-box text-purple">
+      <img src="https://cdn-icons-png.flaticon.com/128/9470/9470695.png">
+    </div>
+    <div>
+      <h6 class="mb-1 fw-semibold">Laboratorium</h6>
     </div>
   </div>
 
+  
+</div>
+    
+  </div>
+</div>
+</div>
+  
+  <!-- layanan lain --> 
+  <div class="row g-2 my-3"> 
+   <div class="info-card">
+  <div class="card-body">
+    <h5 class="card-title">Layanan lain</h5>
+
+   <div class="container layanan_lain py-5">
+        
+  <div class="service-card bg-orange">
+    <div class="icon-box text-orange">
+      ✏️
+    </div>
+    <div>
+      <h6 class="mb-1 fw-semibold">Copywriting</h6>
+      <small>Words that sell.</small>
+    </div>
+  </div>
+  
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <!-- layanan lain -->
+  
 </section>
 
-<section id="jadwal" class="bg-light">
+<section id="jadwal" class="bg-light jadwal-dokter">
   <div class="container">
     <h1>Jadwal Dokter</h1>
     <p>Jadwal praktek dokter mendampingi pasien untuk kesehatan mental yang aman, profesional, dan berkelanjutan.</p>
-    <div class="input-group mb-3">
-      <label class="input-group-text" for="pilihklinik">Pilih Klinik/Layanan</label>
-      <select class="form-select" id="pilihklinik">
-        <option selected>Choose...</option>
-      </select>
-    </div>
-    <div class="input-group mb-3">
-      <label class="input-group-text" for="pilihdokter">Pilih Dokter</label>
-      <select class="form-select" id="pilihdokter">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-    </div>
-
-<!-- dokter -->
-    <div class="card card-doctor-schedule col-md-6 mb-3">
-  <div class="card-body">
-    <h5 class="card-title">{nama_dokter}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">{klinik}</h6>
-    <ul class="list-group list-group-flush">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    A list item
-    <span class="badge text-bg-primary rounded-pill">14</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    A second list item
-    <span class="badge text-bg-light rounded-pill">-</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    A third list item
-    <span class="badge text-bg-primary rounded-pill">1</span>
-  </li>
-</ul>
-     
-     <a href="#" class="btn btn-success btn-sm my-3"><img src="https://cdn-icons-png.flaticon.com/128/15713/15713434.png" style="height:20px;"> Buat Janji</a>     
-  </div>
+<div class="input-group mb-3">
+  <label class="input-group-text" for="pilihklinik">Pilih Klinik/Layanan</label>
+  <select class="form-select" id="pilihklinik">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
 </div>
-    <!-- dokter -->
 
+<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01">Pilih Dokter</label>
+  <select class="form-select" id="pilihdokter">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+    <div class="row" id="container_jadwal_dokter">
+    <!-- jadwal dokter -->
+    <div class="card-doctor-schedule col-md-6 mb-3">
+    <div class="glass-card text-start">
+        <img src="https://cdn-icons-png.flaticon.com/128/17765/17765738.png" class="share-icon">
+        <div class="profile-img">
+        <img src="https://cdn-icons-png.flaticon.com/128/4189/4189146.png" alt="Profile">
+        </div>
+        <h4 class="fw-bold mb-0">Chloe Harrison</h4>
+        <p class="text-muted mb-3">Product designer</p>
+        <div class="row mb-4">
+            <ul class="list-group list-group-transparent list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Senin</strong>
+                <span class="text-muted">-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Selasa</strong>
+                <span>08.00-12.00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Rabu</strong>
+                <span>-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Kamis</strong>
+                <span class="badge-skill">08.00-12.00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Jumat</strong>
+                <span>13.00-15.00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Sabtu</strong>
+                <span>-</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Minggu</strong>
+                <span>-</span>
+              </li>
+            </ul>
+        </div>
+        <div class="d-flex align-items: center; gap-2">
+            <a href="#" class="btn btn-get-touch"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1280px-WhatsApp.svg.png" style="width: 25px; margin-right:15px;"> Buat Janji Temu</a>
+        </div>
+    </div>
+    </div>
+    <!-- jadwal dokter -->
+    </div>
+
+
+    <!-- jadwal tidak ditemukan -->
+      <div class="service-card bg-orange">
+        <div class="icon-box text-orange">
+          <img src="https://cdn-icons-png.flaticon.com/128/9841/9841569.png" style="width: 40px; height: 40px;">
+        </div>
+        <div>
+          <h6 class="mb-1 fw-semibold">Mohon maaf, Jadwal dokter tidak ditemukan. </h6>
+          <small>Customer Care siap membantu membuat janji temu Anda.</small>
+        </div>
+      </div>
+    <!-- jadwal tidak ditemukan -->
+
+    
     <div class="info-card mb-4">
     <div class="info-icon">
       <img src="https://cdn-icons-png.flaticon.com/128/4030/4030492.png" alt="info dokter">
     </div>
     <div>
       <div class="info-title">Informasi dokter</div>
-      <div class="info-text">
-        [belum ada informasi]
-      </div>
+      <div class="info-text">[belum ada informasi]</div>
     </div>
   </div>
+
+  
    
   </div>
 </section>
 
 <section id="fasilitas">
   <div class="container">
-    <h1>Fasilitas</h1>
+    <h1>Rawat Inap</h1>
     <p>Layanan kesehatan mental berbasis empati, keahlian, dan standar medis. Menjadi ruang aman untuk pemulihan dan keseimbangan jiwa untuk kesehatan mental yang berkelanjutan.</p>
-    <div class="info-card mb-4">
-        
-    </div>
+      <div class="row gap-4" id="container_rawat_inap">
+        <div class="col-md-6">
+          <div class="card custom-card text-white">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" class="card-img" alt="Mountain">
+              
+              <div class="card-img-overlay">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                          <h5 class="card-title mb-0 fw-bold">Frostspire Range</h5>
+                          <!-- <p class="location-subtitle mb-0">Silverpine Mountains</p> -->
+                      </div>
+                      <button class="btn btn-start">Detail</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>  
   </div>
 </section>
 <section id="testimoni" class="testimoni">
   <div class="container">
-    <h1>Kata Mereka</h1>
-    <p>Kata mereka yang telah mendapatkan layanan kesehatan mental yang berkelanjutan di Rumah Sakit Islam Jiwa Klender</p>
+    <h1 style="color:#FFF;">Kata Mereka</h1>
+    <p style="color:#FFF;">Kata mereka yang telah mendapatkan layanan kesehatan mental yang berkelanjutan di Rumah Sakit Islam Jiwa Klender</p>
     <!-- carousel -->
-    <div id="testimoniCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-  <div class="carousel-inner" id="testiContainer" style="background-color: transparent; border: none;">
+    
+    
+<div id="testimoniCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+  <!-- CAROUSEL -->
+  <div class="carousel-inner" style="background-color: transparent;border: none;">
+
+    <!-- SLIDE 1 -->
+    <div class="carousel-item active">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Pelayanan sangat ramah dan cepat.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Ahmad <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Dokter profesional dan komunikatif.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Siti <cite>Keluarga Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Fasilitas lengkap dan nyaman.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Budi <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-  <div class="carousel-indicators" id="testiIndicators" style="bottom: -50px;">
+    <!-- SLIDE 2 -->
+    <div class="carousel-item">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Lingkungan rumah sakit bersih.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Rina <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Perawat sangat membantu.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Andi <cite>Keluarga Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <figure>
+                <blockquote class="blockquote">
+                  <p>Pelayanan cepat dan terorganisir.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Dewi <cite>Pasien</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+
+  </div>
+  
+  <!-- INDICATOR -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#testimoniCarousel" data-bs-slide-to="2"></button>
+  </div>
+
 </div>
     <!-- carousel -->
     
@@ -776,19 +765,38 @@ Malaka Jaya - Duren Sawit - Jakarta Timur
 
       <!-- KANAN -->
       <div class="col-md-6">
-        <div class="d-flex justify-content-center justify-content-md-end gap-3 align-items-center">
-
+        <div class="d-flex justify-content-center justify-content-md-end gap-2 align-items-center">
+<span style="font-size: 10px;">resource from : </span>
           <!-- Placeholder Akreditasi -->
           <div class="border rounded p-2 d-flex align-items-center justify-content-center"
-               style="width:80px; height:50px;">
-            <img src="https://rsikendal.com/profile/web/images/SNARS-putih.png" alt="Akreditasi RS" style="width:60px;">
+               style="width:50px; height:20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Flaticon.png" alt="flaticon" style="width:80%;">
           </div>
 
           <!-- Placeholder BPJS -->
           <div class="border rounded p-2 d-flex align-items-center justify-content-center"
-               style="width:80px; height:50px;">
-            <img src="https://www.bpjs-kesehatan.go.id/assets/img/logo/logo-color.svg" alt="BPJS Kesehatan" style="object-fit: contain;">
+               style="width:50px; height:20px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRklJxCRk35EI6vbB5jyz-GBZ1gwNdN-Ds-Udm9FcaN_Ha4gaO55uGcaDI&s=10" alt="pinterest" style="width:80%;">
           </div>
+          
+          <!-- Placeholder BPJS -->
+          <div class="border rounded p-2 d-flex align-items-center justify-content-center"
+               style="width:50px; height:20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Google_Gemini_logo_2025.svg/960px-Google_Gemini_logo_2025.svg.png" alt="gemini" style="width:80%;">
+          </div>
+          
+          <!-- Placeholder BPJS -->
+          <div class="border rounded p-2 d-flex align-items-center justify-content-center"
+               style="width:50px; height:20px;">
+            <img src="https://freelogopng.com/images/all_img/1681038472chatgpt-logo.png" alt="openAI ChatGPT" style="width:80%;">
+          </div>
+          
+           <!-- Placeholder BPJS -->
+          <div class="border rounded p-2 d-flex align-items-center justify-content-center"
+               style="width:50px; height:20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/id/3/39/Logo_Halodoc.png" alt="halodoc" style="width:80%;">
+          </div>
+
 
         </div>
       </div>
@@ -797,8 +805,18 @@ Malaka Jaya - Duren Sawit - Jakarta Timur
   </div>
 </footer>
 
+<!-- offcanvas detail layanan -->
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height:90%;">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">{nama_layanan}</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+      <div id="fasilitas-content"></div>
+  </div>
+</div>
+<!-- offcanvas detail layanan -->
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!-- 🔥 OFFSET DINAMIS -->
 <script>
   function setNavOffset() {
@@ -825,100 +843,38 @@ document.querySelectorAll('#mainNav .nav-link').forEach(link => {
   });
 });
 </script>
-<script type="text/javascript" src="klinik.json"></script>
-<script type="text/javascript" src="testimoni.json"></script>
-<script type="text/javascript" src="jadwal_dokter.json"></script>
 <script>
-$.each(daftar_klinik, function (index, item) {
-      const collapseId = 'flush-collapse-' + item.Kode;
-      const headerId   = 'flush-heading-' + item.Kode;
+const cariBtn = document.getElementById('caridokter');
 
-      $('#accordionFlushExample').append(`
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="${headerId}">
-            <button class="accordion-button collapsed" type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#${collapseId}"
-              aria-expanded="false"
-              aria-controls="${collapseId}">
-              ${item.klinik}
-            </button>
-          </h2>
-          <div id="${collapseId}" class="accordion-collapse collapse"
-            aria-labelledby="${headerId}"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              ${item.deskripsi}
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary btn-sm my-2" type="button" id="Btn${headerId}" data-id="${headerId}">Cari Dokter</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      `);
-      $('#pilihklinik').append(`<option value="${headerId}">${item.klinik}</option>`);
-    });
-</script>
-<script>
-  $(document).ready(function() {
+if (cariBtn) {
+  cariBtn.addEventListener('click', function () {
+    const target = document.getElementById('jadwal');
+    const offcanvasEl = document.getElementById('offcanvasBottom');
+    const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
 
-    function renderCarousel() {
-        var windowWidth = $(window).width();
-        var itemsPerSlide = (windowWidth < 768) ? 1 : 3; // Jika Mobile 1 kartu, jika Desktop 3 kartu
-        
-        var container = $('#testiContainer');
-        var indicators = $('#testiIndicators');
-        
-        container.empty();
-        indicators.empty();
-
-        for (var i = 0; i < testimoni.length; i += itemsPerSlide) {
-            var activeClass = (i === 0) ? 'active' : '';
-            var slideIndex = i / itemsPerSlide;
-
-            // Tambah Indikator
-            indicators.append(`
-                <button type="button" data-bs-target="#testimoniCarousel" 
-                        data-bs-slide-to="${slideIndex}" 
-                        class="${activeClass} bg-primary"></button>
-            `);
-
-            // Buat Slide
-            var slideHtml = `<div class="carousel-item ${activeClass}"><div class="row g-4 justify-content-center">`;
-
-            // Isi Slide dengan kartu
-            for (var j = i; j < i + itemsPerSlide; j++) {
-                if (testimoni[j]) {
-                    slideHtml += `
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card h-100 rounded-4 border-0">
-                                <div class="card-body">
-                                    <figure class="mb-0">
-                                        <blockquote class="blockquote">
-                                            <p style="font-size: 0.95rem;">"${testimoni[j].testimoni}"</p>
-                                        </blockquote>
-                                        <figcaption class="blockquote-footer mb-0">
-                                            ${testimoni[j].nama}
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>`;
-                }
-            }
-            slideHtml += `</div></div>`;
-            container.append(slideHtml);
-        }
+    if (offcanvas) {
+      offcanvas.hide();
     }
 
-    // Jalankan saat pertama kali buka
-    renderCarousel();
-
-    // (Opsional) Jalankan ulang jika layar di-resize (misal dari landscape ke portrait)
-    $(window).resize(function() {
-        renderCarousel();
-    });
-});
+    setTimeout(() => {
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 300);
+  });
+}
 </script>
+
+<script type="text/javascript" src="data/jadwal_dokter.json"></script>
+<script type="text/javascript" src="data/klinik.json"></script>
+<script type="text/javascript" src="data/testimoni.json"></script>
+<script type="text/javascript" src="data/kerjasama.json"></script>
+<script type="text/javascript" src="data/layanan_penunjang.json"></script>
+<script type="text/javascript" src="data/layanan_lain.json"></script>
+<script type="text/javascript" src="data/rawat_inap.json"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
-  </html>
+</html>
