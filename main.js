@@ -212,6 +212,26 @@
         console.log("Klinik yang dipilih kode-nya adalah: " + kodeDipilih);
     });
 
+    var $selectDokter = $("#pilihdokter");
+
+    // 1. Kosongkan select dan beri opsi default
+    $selectDokter.empty();
+    $selectDokter.append('<option value="" selected>Pilih Dokter...</option>');
+
+    // 2. Ambil daftar nama dokter unik (agar tidak dobel di dropdown)
+    var listNamaDokter = [];
+    $.each(data_dokter, function(i, item) {
+        if ($.inArray(item.NAMA_DOKTER, listNamaDokter) === -1) {
+            listNamaDokter.push(item.NAMA_DOKTER);
+        }
+    });
+
+    // 3. Masukkan nama yang sudah unik ke dalam select
+    $.each(listNamaDokter, function(i, nama) {
+        var optionHtml = `<option value="${nama}">${nama}</option>`;
+        $selectDokter.append(optionHtml);
+    });
+
 
     $(document).on("click", ".kategori-klinik", function() {
         // 1. Ambil ID dari data-id tombol yang diklik
@@ -294,6 +314,24 @@
     $("#pilihklinik, #pilihdokter").on("change", function() {
         renderJadwal();
     });
+
+
+    $("#pilihklinik").on("change", function() {
+    var kodeKlinik = $(this).val();
+    $selectDokter.empty().append('<option value="" selected>Pilih Dokter...</option>');
+
+    var filterBerdasarkanKlinik = data_dokter.filter(function(d) {
+        return kodeKlinik === "" || d.KODE_KLINIK === kodeKlinik;
+    });
+
+    var tempNama = [];
+    $.each(filterBerdasarkanKlinik, function(i, item) {
+        if ($.inArray(item.NAMA_DOKTER, tempNama) === -1) {
+            tempNama.push(item.NAMA_DOKTER);
+            $selectDokter.append(`<option value="${item.NAMA_DOKTER}">${item.NAMA_DOKTER}</option>`);
+        }
+    });
+});
 
 
 
