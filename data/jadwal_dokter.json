@@ -1,0 +1,171 @@
+var data_dokter = [
+  {
+    "NAMA_DOKTER": "dr. Hj. Prasila Darwin, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "08.00 - 12.00",
+      "SELASA": "08.00 - 12.00",
+      "RABU": "08.00 - 12.00",
+      "KAMIS": "08.00 - 12.00",
+      "JUM'AT": "08.00 - 12.00",
+      "SABTU": "-"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. Friendy Ahdimar, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "08.00 - 14.00",
+      "SELASA": "08.00 - 14.00",
+      "RABU": "08.00 - 14.00",
+      "KAMIS": "08.00 - 14.00",
+      "JUM'AT": "08.00 - 14.00",
+      "SABTU": "-"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. H. Rusdi Effendi, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "12.00 - 15.00",
+      "SELASA": "-",
+      "RABU": "12.00 - 15.00",
+      "KAMIS": "12.00 - 15.00",
+      "JUM'AT": "-",
+      "SABTU": "12.00 - 15.00"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. Hj. Dahsriati (S.), SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "08.00 - 12.00",
+      "SELASA": "-",
+      "RABU": "-",
+      "KAMIS": "08.00 - 12.00",
+      "JUM'AT": "08.00 - 12.00",
+      "SABTU": "-"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. Umi Faizah, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "14.00 - 15.00",
+      "SELASA": "-",
+      "RABU": "14.00 - 15.00",
+      "KAMIS": "-",
+      "JUM'AT": "14.00 - 15.00",
+      "SABTU": "-"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. Zygawindi Nurhidayati",
+    "NAMA_KLINIK": "Umum",
+    "KODE_KLINIK": "K3",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "09.00 - 15.00",
+      "SELASA": "09.00 - 15.00",
+      "RABU": "09.00 - 15.00",
+      "KAMIS": "09.00 - 15.00",
+      "JUM'AT": "09.00 - 15.00",
+      "SABTU": "09.00 - 15.00"
+    }
+  },
+  {
+    "NAMA_DOKTER": "Novi Maulidta, M.Psi",
+    "NAMA_KLINIK": "Psikologi",
+    "KODE_KLINIK": "K2",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "09.00 - 15.00",
+      "SELASA": "09.00 - 15.00",
+      "RABU": "09.00 - 15.00",
+      "KAMIS": "09.00 - 15.00",
+      "JUM'AT": "09.00 - 15.00",
+      "SABTU": "-"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. H. Erie D. Irawan, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "-",
+      "SELASA": "08.00 - 12.00",
+      "RABU": "-",
+      "KAMIS": "-",
+      "JUM'AT": "-",
+      "SABTU": "08.00 - 12.00"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. Metta Desvini P.S, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "-",
+      "SELASA": "10.00 - 14.00",
+      "RABU": "-",
+      "KAMIS": "12.00 - 15.00",
+      "JUM'AT": "-",
+      "SABTU": "-"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. Deasyanti, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "-",
+      "SELASA": "16.00 - 18.00",
+      "RABU": "-",
+      "KAMIS": "-",
+      "JUM'AT": "13.00 - 15.00",
+      "SABTU": "-"
+    }
+  },
+  {
+    "NAMA_DOKTER": "Dr. Evi Syafrida N., M.Psi",
+    "NAMA_KLINIK": "Psikologi",
+    "KODE_KLINIK": "K2",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "-",
+      "SELASA": "15.30 - 18.00",
+      "RABU": "-",
+      "KAMIS": "-",
+      "JUM'AT": "-",
+      "SABTU": "09.00 - 15.00"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. H. Isa Multazam, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "-",
+      "SELASA": "-",
+      "RABU": "-",
+      "KAMIS": "-",
+      "JUM'AT": "-",
+      "SABTU": "13.30 - 15.00"
+    }
+  },
+  {
+    "NAMA_DOKTER": "dr. Hj Ni Wayan Ani P, SpKJ",
+    "NAMA_KLINIK": "Psikiatri",
+    "KODE_KLINIK": "K1",
+    "HARI_JAM_PRAKTEK": {
+      "SENIN": "-",
+      "SELASA": "-",
+      "RABU": "-",
+      "KAMIS": "-",
+      "JUM'AT": "-",
+      "SABTU": "09.00 - 12.00"
+    }
+  }
+]
