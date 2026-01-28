@@ -61,7 +61,7 @@
 
     $.each(layanan_penunjang, function(i, item) {
         var cardHtml = `
-            <div class="service-card bg-${item.color}">
+            <div class="service-card col-6 bg-${item.color}">
                 <div class="icon-box text-${item.color}">
                     <img src="${item.icon}" alt="icon" onerror="this.src='https://cdn-icons-png.flaticon.com/128/833/833472.png'">
                 </div>
