@@ -206,12 +206,7 @@
         $selectKlinik.append(optionHtml);
     });
 
-    // Opsional: Event listener ketika klinik dipilih
-    $selectKlinik.on('change', function() {
-        var kodeDipilih = $(this).val();
-        console.log("Klinik yang dipilih kode-nya adalah: " + kodeDipilih);
-    });
-
+    
     var $selectDokter = $("#pilihdokter");
 
     // 1. Kosongkan select dan beri opsi default
