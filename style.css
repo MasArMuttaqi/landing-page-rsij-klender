@@ -54,12 +54,12 @@
   }
 
     .btn-whatsapp {
-    background-color: #00addc; /* Warna biru sesuai gambar */
+    background-color: #21C063; /* Warna biru sesuai gambar */
     color: white;
     border: none;
     padding: 10px 30px;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: inline-flex;
     align-items: center;
     transition: all 0.3s ease;
@@ -89,6 +89,7 @@
 .icon-box{
   width: 48px;
   height: 48px;
+  min-width: 48px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -153,8 +154,8 @@
       margin-bottom:6px;
     }
     .info-text{
-      font-size:20px;
-      font-weight:700;
+      font-size:12pt;
+      font-weight:500;
       line-height:1.4;
       color:#000;
     }
@@ -434,9 +435,14 @@
   border: none;
   /*max-height: 320px;*/
   border-radius: 0px !important;
-    background: #344a79 url("https://i.pinimg.com/736x/79/ad/b2/79adb2469d465900a499c16c24597ced.jpg") no-repeat;
+    /*background: #ffffff url("https://i.pinimg.com/736x/13/19/75/131975ff8b7730ea476aca003e1e2a50.jpg") no-repeat;
     background-size: contain;
-    background-position: top center;
+    background-position: left bottom;*/
+    background-image: url('https://i.pinimg.com/736x/13/19/75/131975ff8b7730ea476aca003e1e2a50.jpg'), url('https://i.pinimg.com/736x/4f/8d/31/4f8d3138f9c6214cec2b780f1a647fff.jpg');
+    background-size: 150px 150px, cover;
+    background-position: left bottom -29px, center;
+    background-repeat: no-repeat, no-repeat;
+    background-blend-mode: multiply, normal;
     box-shadow: 0 8px 22px rgba(0,0,0,.08);
 }
 
@@ -688,7 +694,7 @@
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.8);
             border-radius: 30px;
-            width: 350px;
+            /*width: 350px;*/
             padding: 30px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
             position: relative;
@@ -714,6 +720,7 @@
             object-fit: contain;
             margin-bottom: 15px;
             padding: 10px;
+            background: #e9f0ff;
         }
         
         .card-doctor-schedule .profile-img img{
@@ -770,5 +777,11 @@
         background-color: transparent !important; 
         border-color: rgba(255, 255, 255, 0.2);
         color: inherit;
+      }
+
+      .card-doctor-schedule .list-group-item.bg-white {
+          border-bottom: none !important;
+          margin-top: 2px;
+          margin-bottom: 2px;
       }
 /* === JADWAL DOKTER === */

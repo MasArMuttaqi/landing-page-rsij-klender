@@ -61,7 +61,7 @@
 
     $.each(layanan_penunjang, function(i, item) {
         var cardHtml = `
-            <div class="service-card col-6 bg-${item.color}">
+            <div class="service-card bg-${item.color}">
                 <div class="icon-box text-${item.color}">
                     <img src="${item.icon}" alt="icon" onerror="this.src='https://cdn-icons-png.flaticon.com/128/833/833472.png'">
                 </div>
@@ -206,7 +206,12 @@
         $selectKlinik.append(optionHtml);
     });
 
-    
+    // Opsional: Event listener ketika klinik dipilih
+    $selectKlinik.on('change', function() {
+        var kodeDipilih = $(this).val();
+        console.log("Klinik yang dipilih kode-nya adalah: " + kodeDipilih);
+    });
+
     var $selectDokter = $("#pilihdokter");
 
     // 1. Kosongkan select dan beri opsi default
@@ -273,6 +278,17 @@
         if (filteredData.length > 0) {
             $.each(filteredData, function(i, doc) {
                 var jadwal = doc.HARI_JAM_PRAKTEK;
+                
+                // 1. Dapatkan index hari ini (0 = Minggu, 1 = Senin, ..., 6 = Sabtu)
+                var hariIniIndex = new Date().getDay();
+                
+                // 2. Fungsi pembantu untuk menentukan class active/highlight
+                // Kita bandingkan index hari loop dengan index hari ini
+                var checkToday = function(targetIndex) {
+                    // Jika targetIndex sama dengan hari ini, tambahkan class 'bg-white text-dark rounded-3 shadow-sm' atau class kustom Anda
+                    return hariIniIndex === targetIndex ? 'bg-white text-dark fw-bold rounded-3 shadow-sm px-2' : '';
+                };
+
                 var cardHtml = `
                 <div class="card-doctor-schedule col-md-6 mb-3">
                     <div class="glass-card text-start">
@@ -283,15 +299,18 @@
                         <p class="text-muted mb-3">Klinik ${doc.NAMA_KLINIK}</p>
                         
                         <ul class="list-group list-group-transparent list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between"><strong>Senin</strong> <span>${jadwal["SENIN"]}</span></li>
-                            <li class="list-group-item d-flex justify-content-between"><strong>Selasa</strong> <span>${jadwal["SELASA"]}</span></li>
-                            <li class="list-group-item d-flex justify-content-between"><strong>Rabu</strong> <span>${jadwal["RABU"]}</span></li>
-                            <li class="list-group-item d-flex justify-content-between"><strong>Kamis</strong> <span>${jadwal["KAMIS"]}</span></li>
-                            <li class="list-group-item d-flex justify-content-between"><strong>Jumat</strong> <span>${jadwal["JUM'AT"]}</span></li>
-                            <li class="list-group-item d-flex justify-content-between"><strong>Sabtu</strong> <span>${jadwal["SABTU"]}</span></li>
+                            <li class="list-group-item d-flex justify-content-between ${checkToday(1)}"><strong>Senin</strong> <span>${jadwal["SENIN"]}</span></li>
+                            <li class="list-group-item d-flex justify-content-between ${checkToday(2)}"><strong>Selasa</strong> <span>${jadwal["SELASA"]}</span></li>
+                            <li class="list-group-item d-flex justify-content-between ${checkToday(3)}"><strong>Rabu</strong> <span>${jadwal["RABU"]}</span></li>
+                            <li class="list-group-item d-flex justify-content-between ${checkToday(4)}"><strong>Kamis</strong> <span>${jadwal["KAMIS"]}</span></li>
+                            <li class="list-group-item d-flex justify-content-between ${checkToday(5)}"><strong>Jumat</strong> <span>${jadwal["JUM'AT"]}</span></li>
+                            <li class="list-group-item d-flex justify-content-between ${checkToday(6)}"><strong>Sabtu</strong> <span>${jadwal["SABTU"]}</span></li>
                         </ul>
                         <div class="d-grid">
-                            <a href="#" class="btn btn-get-touch"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1280px-WhatsApp.svg.png" style="width: 25px; margin-right:15px;"> Buat Janji Temu</a>
+                            <a href="#" class="btn btn-get-touch my-3"> 
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1280px-WhatsApp.svg.png" style="width: 25px; margin-right:15px;"> 
+                                Buat Janji Temu
+                            </a>
                         </div>
                     </div>
                 </div>`;
