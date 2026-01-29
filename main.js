@@ -125,14 +125,27 @@
         // Isi Judul Offcanvas
         $("#offcanvasBottomLabel").text("Fasilitas " + data.kategori);
 
-        // Isi Body Offcanvas dengan List Fasilitas
-        var listHtml = '<ul class="list-group list-group-flush">';
-        $.each(data.fasilitas, function(j, fas) {
-            listHtml += `<li class="list-group-item d-flex align-items-center">
-                            <img src="https://cdn-icons-png.flaticon.com/128/5249/5249095.png" style="width:20px; margin-right:20px;"> ${fas}
-                         </li>`;
-        });
-        listHtml += '</ul>';
+        // Render Body Offcanvas dengan struktur Card
+    var listHtml = '<div class="d-flex flex-column gap-3">'; // Menggunakan gap untuk jarak antar card
+    
+    $.each(data.fasilitas, function(j, fas) {
+        // Tentukan warna berdasarkan index agar bervariasi (opsional)
+        var colors = ['purple', 'orange', 'blue', 'yellow'];
+        var selectedColor = colors[j % colors.length];
+
+        listHtml += `
+            <div class="service-card bg-${selectedColor}">
+                <div class="icon-box text-${selectedColor}">
+                    <img src="${fas.icon}" alt="icon" style="width: 25px; height: 25px; object-fit: contain;">
+                </div>
+                <div class="ms-3">
+                    <h6 class="mb-0 fw-semibold">${fas.fasilitas}</h6>
+                    <small class="text-muted">${fas['keterangan detail']}</small>
+                </div>
+            </div>`;
+    });
+    
+    listHtml += '</div>';
 
         $("#fasilitas-content").html(listHtml);
 
