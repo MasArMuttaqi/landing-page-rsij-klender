@@ -503,14 +503,14 @@
           background-size: cover;
       }
  .btn-promo-item{
-          display: flex;
-          justify-content: space-between;
-          font-weight:500;
-      }
-      .btn-promo-item img{
-          height: 20px;
-          widht: 20px;
-      }
+    display: flex;
+    justify-content: space-between;
+    font-weight:500;
+}
+.btn-promo-item img{
+   height: 20px;
+   widht: 20px;
+}
 /* === PROMO === */
 
 /* === LAYANAN === */
