@@ -1,15 +1,21 @@
   $(document).ready(function() {
 
+
+    // Fungsi untuk render
+function renderLogos(data) {
     $.each(kerjasama, function(index, item) {
         var html = `
             <div class="logo-item">
                 <img src="${item.logo}" alt="${item.lembaga}" title="${item.lembaga}">
             </div>
         `;
-        
-        // 3. Masukkan ke dalam class .logo-marquee
         $(".logo-marquee").append(html);
     });
+}
+
+// Render dua kali untuk efek seamless
+renderLogos(kerjasama);
+renderLogos(kerjasama);
 
     var $carouselInner = $("#testimoniCarousel .carousel-inner");
     var $indicators = $("#testimoniCarousel .carousel-indicators");
@@ -175,6 +181,12 @@
                     <div class="glass-layer mb-2">
                         <img src="${item.icon}" class="icon-img" alt="${item.klinik}">
                     </div>
+                    <div class="icon-wrapper">
+                        <div class="bg-layer"></div> 
+                      <div class="glass-layer">
+                        <img src="${item.icon}" alt="${item.klinik}" class="icon-img">
+                      </div>
+                   </div>
                     <span class="text-label fw-semibold" style="font-size: 0.85rem; color: #444;">${item.klinik}</span>
                 </button>
             </div>`;
@@ -219,11 +231,6 @@
         $selectKlinik.append(optionHtml);
     });
 
-    // Opsional: Event listener ketika klinik dipilih
-    $selectKlinik.on('change', function() {
-        var kodeDipilih = $(this).val();
-        console.log("Klinik yang dipilih kode-nya adalah: " + kodeDipilih);
-    });
 
     var $selectDokter = $("#pilihdokter");
 
