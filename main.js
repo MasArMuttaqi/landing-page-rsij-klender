@@ -2,7 +2,7 @@
 
 
     // Fungsi untuk render
-function renderLogos(data) {
+function renderLogos(kerjasama) {
     $.each(kerjasama, function(index, item) {
         var html = `
             <div class="logo-item">
