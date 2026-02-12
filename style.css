@@ -542,6 +542,47 @@
 .promo-page{
   background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
 }
+      #promo{
+          background-image: linear-gradient(
+            rgba(255,255,255,0.8),
+            rgba(255,255,255,0.8)
+        ), url("https://i.pinimg.com/736x/42/92/4f/42924f78500056aa5e50db1257b82d21.jpg");
+          background-size: cover;
+      }
+      .btn-promo-item{
+          display: flex;
+          justify-content: space-between;
+          font-weight:500;
+      }
+      .btn-promo-item img{
+          height: 20px;
+          widht: 20px;
+      }
+      
+      /* Custom Styling untuk Indikator sesuai Gambar */
+     #promo .carousel-indicators {
+            bottom: -50px; /* Letakkan di bawah card */
+        }
+
+      #promo .carousel-indicators [data-bs-target] {
+            width: 30px; /* Panjang garis abu-abu */
+            height: 6px;
+            border-radius: 10px;
+            background-color: #e0e0e0; /* Warna dasar */
+            border: none;
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+      #promo .carousel-indicators .active {
+            width: 60px; /* Lebih panjang saat aktif */
+            background-color: #007bff; /* Warna biru aktif */
+        }
+
+      #promo .container-carousel {
+            max-width: 400px;
+            margin: 50px auto;
+        }
 /* === PROMO === */
 
 /* === LAYANAN === */
