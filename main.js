@@ -178,9 +178,6 @@ renderLogos(kerjasama);
                 <button class="btn btn-light info-card d-flex flex-column align-items-center w-100 py-3 shadow-sm btn-poli" 
                         type="button" 
                         data-index="${i}">
-                    <div class="glass-layer mb-2">
-                        <img src="${item.icon}" class="icon-img" alt="${item.klinik}">
-                    </div>
                     <div class="icon-wrapper">
                         <div class="bg-layer"></div> 
                       <div class="glass-layer">
