@@ -542,17 +542,12 @@
 .promo-page{
   background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
 }
-      #promo{
-          background-image: linear-gradient(
-            rgba(255,255,255,0.8),
-            rgba(255,255,255,0.8)
-        ), url("https://i.pinimg.com/736x/42/92/4f/42924f78500056aa5e50db1257b82d21.jpg");
-          background-size: cover;
-      }
+
       .btn-promo-item{
           display: flex;
           justify-content: space-between;
           font-weight:500;
+          width: -webkit-fill-available;
       }
       .btn-promo-item img{
           height: 20px;
