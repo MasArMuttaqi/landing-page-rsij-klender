@@ -606,7 +606,7 @@
     right: 5px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #60A5FA, #2563EB);
+    background: radial-gradient(circle at bottom left, #2C368B, #1D5F82 60%, #10816F 100%);
     border-radius: 10px;
     z-index: 1;
 }
